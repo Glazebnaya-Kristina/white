@@ -1,0 +1,56 @@
+//------------------------------------------------------------------------------
+//  Генератор правил для контейнера
+//------------------------------------------------------------------------------
+
+@mixin container {
+  display: block;
+  width: 100%;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $screen-sm) {
+    width: $container-sm;
+  }
+
+  @media (min-width: $screen-md) {
+    width: $container-md;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: $container-lg;
+    padding: 0 60px;
+  }
+
+  @media (min-width: $screen-xl) {
+    width: $container-xl;
+    padding: 0;
+  }
+
+  //@media (min-width: $screen-xxl) {
+  //  width: $container-xxl;
+  //}
+}
+
+
+
+@mixin container-inner {
+  display: block;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $screen-md) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: $screen-xl) {
+    width: $container-xl;
+    padding: 0;
+  }
+}

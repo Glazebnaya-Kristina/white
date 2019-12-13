@@ -1,0 +1,11 @@
+// Подключения блоков
+//@import "../blocks/button";
+// Подключения спомогательных файлов
+//@import "../helper/animations";
+//
+// Подключения бибилиотек
+//@import "../libs/slick";
+
+.header {
+  $block-name:                &; // #{$block-name}__element
+}

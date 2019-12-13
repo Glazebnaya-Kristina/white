@@ -1,0 +1,11 @@
+// Подключения блоков
+//@import "../blocks/button";
+// Подключения спомогательных файлов
+//@import "../helper/animations";
+//
+// Подключения бибилиотек
+
+.footer{
+  $block-name:                &; // #{$block-name}__element
+
+}
