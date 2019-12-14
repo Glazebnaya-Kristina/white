@@ -1,4 +1,7 @@
 .logo{
+  z-index: 3;
+  padding: 7px 15px;
+  background-color: $white;
 
   &__name{
     @include hide-text;

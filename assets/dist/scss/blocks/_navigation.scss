@@ -1,57 +1,104 @@
-.navigation{
-  $block-name:                &; // #{$block-name}__element
-  @include container-inner;
+.navigation {
+  $block-name: &; // #{$block-name}__element
+
   display: none;
   @media (min-width: $screen-md) {
     display: block;
   }
-  &__list{
+
+  &__list {
     @include ul-reset;
     display: flex;
 
-    li{
-      &:not(:first-of-type){
+    li {
+      color: $white;
+      font-size: 18px;
+
+      &:not(:first-of-type) {
         @media (min-width: $screen-md) {
           margin-left: 10px;
         }
         @media (min-width: $screen-lg) {
-          margin-left: 20px;
+          margin-left: 50px;
         }
         @media (min-width: $screen-xl) {
-          margin-left: 73px;
+          margin-left: 86px;
         }
       }
-      &:nth-child(5){
-        @media (min-width: $screen-md) {
-          margin-left: auto;
+      a {
+        position: relative;
+        z-index: 1;
+
+        &:after {
+          @include pseudo;
+          z-index: -1;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          background-color: $color-orange;
+          opacity: 0;
+          transition: $transition-time;
+          @media (min-width: $screen-xl) {
+            width: 122px;
+            height: 122px;
+          }
         }
-        @media (min-width: $screen-xl) {
-          margin-left: auto;
+        &:hover,
+        &:focus{
+          &:after{
+            opacity: 1;
+          }
         }
-      }
-      a{
-        //@include link($text-color-gray-dark, $color-gold);
       }
     }
   }
 
 
-  &--opened{
-    position: fixed;
-    top: 0;
-    z-index: 6;
+  &--opened {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    z-index: 2;
     display: block;
-    padding: 80px 20px;
-    width: 80%;
-    height: 100%;
-    background-color: $white;
-    animation: show 0.5s ease-in-out;
+    padding: 62px 20px 50px;
+    background-color: $color-blue;
+    opacity: 0.95;
+    //animation: show 0.5s ease-in-out;
 
-    #{$block-name}__list{
+    #{$block-name}__list {
       flex-direction: column;
-      li{
-        &:not(:first-child){
-          margin-top: 20px;
+      align-items: center;
+
+      li {
+        &:not(:first-child) {
+          margin-top: 22px;
+        }
+
+        a {
+          position: relative;
+          z-index: 1;
+          &:after {
+            @include pseudo;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 59px;
+            height: 59px;
+            border-radius: 50%;
+            background-color: rgb(5, 56, 161);
+            opacity: 0;
+            transition: $transition-time;
+          }
+          &:hover{
+            &:after{
+              opacity: 1;
+            }
+          }
         }
       }
     }

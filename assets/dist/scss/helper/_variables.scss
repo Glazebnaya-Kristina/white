@@ -4,13 +4,13 @@ $screen-xs:                   0;
 $screen-sm:                   480px;
 $screen-md:                   768px;
 $screen-lg:                   1024px;
-$screen-xl:                   1345px;
+$screen-xl:                   1430px;
 //$screen-xxl:                  1800px;
 
 $container-sm:                100%;
-$container-md:                100%;
-$container-lg:                100%;
-$container-xl:                1280px;
+$container-md:                $screen-md;
+$container-lg:                $screen-lg;
+$container-xl:                1370px;
 //$container-xxl:               $screen-xxl - 30;
 
 
@@ -34,9 +34,13 @@ $color-warning:               hsl(35, 84%, 62%);
 
 
 // цвета для текущего проекта
-//$text-color-brown:            #362e2f;
-
-//$color-gold:                  #b88c41;
+$color-black:                   #0e0c16;
+$color-grey-lightest:           #f5f5f5;
+$color-red:                     #f35405;
+$color-orange:                  #fe6c24;
+$color-blue:                    #0a3eb1;
+$color-violet:                  #696774;
+$color-violet-lightest:         #b5b1c8;
 
 
 
@@ -57,10 +61,10 @@ $color-skype:                      #00aff0;
 
 // Семантические цвета
 $body-background:             $white;
-$text-color:                  $gray-darkest;
-$text-color--muted:           $gray;
-$link-color:                  $text-color;
-$link-color--hover:           darken($text-color, 15%);
+$text-color:                  $color-black;
+//$text-color--muted:           $gray;
+//$link-color:                  $text-color;
+//$link-color--hover:           darken($text-color, 15%);
 
 
 
@@ -68,9 +72,9 @@ $link-color--hover:           darken($text-color, 15%);
 $font-size:                   16px;
 $font-size-sm:                0.75em;
 $line-height:                 1.5;
-$font-family:                'Gotham Pro';
-$font-family-Cormorant:      'Cormorant Garamond';
-$font-family-Narrow:         'Gotham Pro Narrow';
+$font-family:                'Avenir Next Cyr';
+$font-family-Din-pro:        'DIN Pro';
+$font-family-Din-pro-cond:   'DIN Pro Cond';
 $font-family--monospace:     SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 
 

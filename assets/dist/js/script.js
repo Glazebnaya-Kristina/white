@@ -68,62 +68,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
    }); // end foreach
 
-
-   // закрытие модального окна с регитсрацией
-   var btnThanksRegistration = document.querySelector('button[data-modal="thanks-registration"]');
-
-   btnThanksRegistration.addEventListener('click', function (e) {
-      e.preventDefault();
-      var modalRegistration = document.querySelector('.popup[data-modal="registration"]');
-      modalRegistration.classList.remove('popup--opened');
-   });
-
-   // закрытие модального окна Спасибо за регистрацию
-   var btnRegistrationThanks = document.querySelector('.modal__thanks-registration button[data-modal="sign-in"]');
-
-   btnRegistrationThanks.addEventListener('click', function (e) {
-      e.preventDefault();
-      var modalRegistrationThanks = document.querySelector('.popup[data-modal="thanks-registration"]');
-      modalRegistrationThanks.classList.remove('popup--opened');
-   });
-
-   // закрытие модального окна со входом
-   var btnRegistration = document.querySelector('.modal__sign-in button[data-modal="registration"]');
-
-   btnRegistration.addEventListener('click', function (e) {
-      e.preventDefault();
-      var modalRegistrationTwo = document.querySelector('.popup[data-modal="sign-in"]');
-      modalRegistrationTwo.classList.remove('popup--opened');
-   });
-
-
-   // закрытие модального окна со входом
-   var btnRegistration2 = document.querySelector('button[data-modal="password-reminder"]');
-
-   btnRegistration2.addEventListener('click', function (e) {
-      e.preventDefault();
-      var modalRegistration2 = document.querySelector('.popup[data-modal="sign-in"]');
-      modalRegistration2.classList.remove('popup--opened');
-   });
-
-   // закрытие модального окна Напомнить пароль
-   var btnPass = document.querySelector('button[data-modal="new-pass"]');
-
-   btnPass.addEventListener('click', function (e) {
-      e.preventDefault();
-      var modalPass = document.querySelector('.popup[data-modal="password-reminder"]');
-      modalPass.classList.remove('popup--opened');
-   });
-
-   // закрытие модального окна Новый пароль отправлен
-   var btnPassGo = document.querySelector('.modal__new-pass button[data-modal="sign-in"]');
-
-   btnPassGo.addEventListener('click', function (e) {
-      e.preventDefault();
-      var modalPass = document.querySelector('.popup[data-modal="new-pass"]');
-      modalPass.classList.remove('popup--opened');
-   });
-
    closeButtons.forEach(function(item){
 
       item.addEventListener('click', function(e) {

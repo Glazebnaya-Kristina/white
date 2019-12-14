@@ -10,6 +10,9 @@
   font-style: normal;
 }
 
+i{
+  display: flex;
+}
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
@@ -46,50 +49,20 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-.icon-facebook-logo:before { content: '\e800'; } /* '' */
-.icon-vk:before { content: '\e801'; } /* '' */
-.icon-instagram:before { content: '\e802'; } /* '' */
-.icon-plus:before { content: '\e803'; } /* '' */
-.icon-youtube:before { content: '\e804'; } /* '' */
-.icon-right-arrow:before { content: '\e805'; } /* '' */
-.icon-level-1:before { content: '\e806'; } /* '' */
-.icon-odnoklassnik:before { content: '\e807'; } /* '' */
-.icon-error:before { content: '\e808'; } /* '' */
-.icon-download:before { content: '\e809'; } /* '' */
-.icon-level-2:before { content: '\e80a'; } /* '' */
-.icon-types-tourism-2:before { content: '\e80b'; } /* '' */
-.icon-types-tourism-3:before { content: '\e80c'; } /* '' */
-.icon-types-tourism-4:before { content: '\e80d'; } /* '' */
-.icon-level-3:before { content: '\e80e'; } /* '' */
-.icon-level-4:before { content: '\e80f'; } /* '' */
-.icon-types-tourism-7:before { content: '\e810'; } /* '' */
-.icon-types-tourism-8:before { content: '\e811'; } /* '' */
-.icon-types-tourism-9:before { content: '\e812'; } /* '' */
-.icon-types-tourism-1:before { content: '\e813'; } /* '' */
-.icon-types-tourism-5:before { content: '\e814'; } /* '' */
-.icon-types-tourism-6:before { content: '\e815'; } /* '' */
-.icon-types-hiking-3:before { content: '\e816'; } /* '' */
-.icon-level-5:before { content: '\e817'; } /* '' */
-.icon-level-6:before { content: '\e818'; } /* '' */
-.icon-types-hiking-6:before { content: '\e819'; } /* '' */
-.icon-types-hiking-1:before { content: '\e81a'; } /* '' */
-.icon-types-hiking-2:before { content: '\e81b'; } /* '' */
-.icon-types-hiking-5:before { content: '\e81c'; } /* '' */
-.icon-types-hiking-4:before { content: '\e81d'; } /* '' */
-.icon-search:before { content: '\e81e'; } /* '' */
-.icon-next:before { content: '\e81f'; } /* '' */
-.icon-refresh:before { content: '\e820'; } /* '' */
-.icon-star:before { content: '\e821'; } /* '' */
-.icon-binoculars:before { content: '\e822'; } /* '' */
-.icon-clock:before { content: '\e823'; } /* '' */
-.icon-attachment:before { content: '\e824'; } /* '' */
-.icon-smile:before { content: '\e825'; } /* '' */
-.icon-hand:before { content: '\e826'; } /* '' */
-.icon-arrow:before { content: '\e827'; } /* '' */
-.icon-route:before { content: '\e828'; } /* '' */
-.icon-rout:before { content: '\e829'; } /* '' */
-.icon-checked:before { content: '\e82a'; } /* '' */
-.icon-settings:before { content: '\e82b'; } /* '' */
-.icon-door:before { content: '\e82c'; } /* '' */
-.icon-email:before { content: '\e82d'; } /* '' */
-.icon-right-arr:before { content: '\e82e'; } /* '' */
+.icon-clock-circular-outline:before { content: '\e800'; } /* '' */
+.icon-eye:before { content: '\e803'; } /* '' */
+.icon-facebook-logo:before { content: '\e804'; } /* '' */
+.icon-house:before { content: '\e805'; } /* '' */
+.icon-instagram-logo:before { content: '\e806'; } /* '' */
+.icon-macintosh-mouse:before { content: '\e807'; } /* '' */
+.icon-maps-and-flags:before { content: '\e808'; } /* '' */
+.icon-right-arrow:before { content: '\e80a'; } /* '' */
+.icon-user:before { content: '\e80b'; } /* '' */
+.icon-youtube:before { content: '\e80c'; } /* '' */
+.icon-arrow-2:before { content: '\e80d'; } /* '' */
+.icon-calendar:before { content: '\e80f'; } /* '' */
+.icon-call-answer:before { content: '\e810'; } /* '' */
+.icon-arrow:before { content: '\e812'; } /* '' */
+.icon-close:before { content: '\e813'; } /* '' */
+.icon-menu:before { content: '\e814'; } /* '' */
+.icon-tick:before { content: '\e815'; } /* '' */
