@@ -1,0 +1,87 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+.main-banner{
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  padding: 139px 0 199px;
+  background-color: $color-blue;
+  background-image: url('../img/home/header-bg-mob.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media (min-width: $screen-xl) {
+    padding-bottom: 327px;
+    background-image: url('../img/home/header-bg.jpg');
+  }
+  &:after{
+    @include pseudo;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    height: 72px;
+    background-color: $white;
+    @media (min-width: $screen-xl) {
+      width: 33.3%;
+      height: 144px;
+    }
+  }
+
+  &__inner{
+    @include container;
+  }
+
+  &__title{
+    margin: 0;
+    font-family: $font-family-Din-pro-cond;
+    font-weight: 900;
+    color: $color-orange;
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 11px;
+    line-height: 83px;
+    @media (min-width: $screen-xl) {
+      margin-bottom: 307px;
+      font-size: 110px;
+      letter-spacing: 18px;
+    }
+
+    span{
+      display: block;
+      color: $white;
+      font-size: 105px;
+      font-weight: 700;
+      line-height: 106px;
+      letter-spacing: normal;
+      @media (min-width: $screen-xl) {
+        display: none;
+      }
+    }
+  }
+
+  &__description{
+    margin-top: 31px;
+    line-height: 38px;
+    font-size: 26px;
+    font-weight: 300;
+    text-align: center;
+    color: $white;
+    text-transform: uppercase;
+    @media (min-width: $screen-xl) {
+      font-size: 45px;
+    }
+  }
+
+  &__mouse{
+    position: absolute;
+    left: 50%;
+    bottom: 19px;
+    transform: translateX(-50%);
+    @media (min-width: $screen-xl) {
+      bottom: 49px;
+    }
+  }
+
+}

@@ -1,11 +1,10 @@
-// Подключения блоков
-//@import "blocks/time-flag";
-
-// поключения библиотек
-//@import "libs/title";
-// стили шаблонов
-// поключения секций
-//@import "sections/index/about-us";
 // стили шаблонов
 @import "templates/header";
 @import "templates/footer";
+// Подключения блоков
+//@import "blocks/time-flag";
+// поключения библиотек
+//@import "libs/title";
+
+// поключения секций
+@import "sections/index/main-banner";

@@ -1,0 +1,21 @@
+@import "../helper/mixins";
+
+
+.mouse{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: $white;
+
+  &__line{
+    display: block;
+    width: 2px;
+    height: 38px;
+    margin-bottom: 31px;
+    background-color: $white;
+  }
+
+  i{
+    font-size: 38px;
+  }
+}
