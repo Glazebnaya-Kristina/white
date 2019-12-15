@@ -103,9 +103,9 @@
     position: relative;
     margin-top: 78px;
     background-color: $color-blue;
-    background-image: url('../img/home/about-company-bg.jpg');
+    background-image: url('../img/home/about-company-bg-mini.jpg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top left;
     background-size: cover;
     @media (min-width: $screen-lg) {
       grid-row: 3 / 5;
