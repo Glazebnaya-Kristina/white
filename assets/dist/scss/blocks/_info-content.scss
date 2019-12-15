@@ -1,4 +1,5 @@
 .info-content {
+
   &__title {
     margin: 0;
     text-transform: uppercase;
@@ -7,25 +8,40 @@
     font-size: 22px;
     color: $color-orange;
     letter-spacing: 0.255rem;
-    &--small{
+
+    &--small {
       max-width: 198px;
       margin-left: auto;
+      @media (min-width: $screen-md) {
+        margin: 0 auto;
+      }
+      @media (min-width: $screen-lg) {
+        max-width: 100%;
+        margin: 0;
+      }
     }
   }
 
-  &__list{
+  &__list {
     color: $white;
 
-    &--small{
+    &--small {
       max-width: 268px;
       margin: 0 auto;
+      @media (min-width: $screen-lg) {
+        max-width: 100%;
+        margin: 0;
+      }
     }
   }
 
-  &__item{
+  &__item {
     line-height: 26px;
-    &:not(:first-child){
+    &:not(:first-child) {
       margin-top: 10px;
+      @media (min-width: $screen-xl) {
+        margin-top: 26px;
+      }
     }
   }
 }

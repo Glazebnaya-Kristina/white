@@ -6,8 +6,57 @@
   $block-name:                &; // #{$block-name}__element
 
   padding: 79px 0 58px;
+  @media (min-width: $screen-xl) {
+    padding-bottom: 202px;
+  }
+  &__inner{
+    @media (min-width: $screen-lg) {
+      @include container;
+      display: grid;
+      grid-template-columns: 1fr 160px 1fr;
+    }
+    @media (min-width: $screen-xl) {
+      grid-template-columns: 1fr 230px 1fr;
+      grid-gap: 0 93px;
+    }
+  }
+
+  &__wrapper-img-bg{
+    display: none;
+    @media (min-width: $screen-lg) {
+      grid-row: 1 / 3;
+      display: block;
+      height: 543px;
+    }
+    @media (min-width: $screen-xl) {
+      grid-row: 1 / 3;
+      height: 674px;
+      width: 450px;
+      padding-top: 47px;
+    }
+
+    img{
+      object-fit: cover;
+      object-position: center center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   &__title-main{
     padding: 0 15px;
+    @media (min-width: $screen-lg) {
+      max-height: 470px;
+      grid-row: 1 / 4;
+    }
+    @media (min-width: $screen-xl) {
+      grid-row: 1 / 4;
+      align-self: flex-end;
+      max-height: 852px;
+      height: 100%;
+      padding: 0;
+      padding-top: 61px;
+    }
   }
 
   &__description{
@@ -20,11 +69,29 @@
       font-weight: 400;
       color: $color-blue;
     }
+    @media (min-width: $screen-xl) {
+      margin-top: 42px;
+      margin-left: 15px;
+      padding: 0;
+      font-size: 24px;
+      line-height: 36px;
+    }
   }
 
   &__content{
     margin-top: 50px;
     padding: 0 15px;
+    @media (min-width: $screen-xl) {
+      margin-top: 69px;
+      margin-left: 15px;
+      padding: 0;
+    }
+
+    .title{
+      @media (min-width: $screen-xl) {
+        margin-left: 6px;
+      }
+    }
   }
   &__text{
     margin-top: 20px;
@@ -39,6 +106,17 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    @media (min-width: $screen-lg) {
+      grid-row: 3 / 5;
+      width: 758px;
+      margin-left: -386px;
+    }
+    @media (min-width: $screen-xl) {
+      align-self: flex-start;
+      width: 773px;
+      margin-left: -291px;
+      margin-top: 127px;
+    }
     &:after{
       @include pseudo;
       left: 0;
@@ -46,21 +124,61 @@
       width: 31%;
       height: 86px;
       background-color: $white;
+      @media (min-width: $screen-lg) {
+        width: 46%;
+      }
+      @media (min-width: $screen-xl) {
+        width: 21%;
+        height: 135px;
+      }
     }
   }
 
   &__info-content{
+    max-width: 345px;
+    margin: 0 auto;
     padding-top: 31px;
     padding-bottom: 60px;
+    @media (min-width: $screen-lg) {
+      max-width: 380px;
+      margin: 0;
+      margin-left: auto;
+      padding-right: 20px;
+      padding-top: 70px;
+    }
+    @media (min-width: $screen-xl) {
+      max-width: 481px;
+      padding-bottom: 111px;
+      padding-right: 30px;
+    }
   }
 
   &__info-content-list{
     margin-top: 23px;
+    @media (min-width: $screen-lg) {
+      margin-top: 70px;
+    }
+    @media (min-width: $screen-lg) {
+      margin-top: 79px;
+      padding-left: 32px;
+    }
   }
 
   &__clients-wrapper{
+    max-width: 345px;
+    margin: 0 auto;
     margin-top: 34px;
     padding: 0 15px;
+    @media (min-width: $screen-lg) {
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    @media (min-width: $screen-xl) {
+      margin-top: 101px;
+      margin-left: 19px;
+      padding: 0;
+    }
   }
 
   &__clients{
@@ -75,6 +193,10 @@
     align-items: center;
     flex-basis: 42%;
     margin-top: 29px;
+    @media (min-width: $screen-xl) {
+      flex-basis: 26%;
+      margin-top: 46px;
+    }
     img{
       display: block;
       max-width: 116px;
@@ -84,6 +206,18 @@
   &__wrapper-img{
     height: 207px;
     margin-top: 38px;
+    @media (min-width: $screen-md) {
+      height: 400px;
+    }
+    @media (min-width: $screen-lg) {
+      grid-column: 2 / -1;
+      margin-left: 80px;
+    }
+    @media (min-width: $screen-xl) {
+      margin-left: 115px;
+      margin-top: 85px;
+      height: 440px;
+    }
     img{
       object-fit: cover;
       object-position: center center;
