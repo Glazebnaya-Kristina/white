@@ -2,9 +2,11 @@
 @import "templates/header";
 @import "templates/footer";
 // Подключения блоков
-//@import "blocks/time-flag";
+@import "blocks/title-main";
+@import "blocks/info-content";
 // поключения библиотек
 //@import "libs/title";
 
 // поключения секций
 @import "sections/index/main-banner";
+@import "sections/index/about-company";

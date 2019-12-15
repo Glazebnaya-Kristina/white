@@ -1,0 +1,41 @@
+.title-main{
+  width: fit-content;
+  //margin: 0 auto;
+  text-transform: uppercase;
+  &__title{
+    margin: 0;
+    padding-right: 39px;
+    color: $color-violet;
+    font-family: $font-family-Din-pro-cond;
+    font-size: 47px;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 0.15rem;
+  }
+  &__list{
+    @include ul-reset;
+    display: flex;
+    justify-content: flex-end;
+    font-family: $font-family-Din-pro-cond;
+  }
+  &__item{
+    position: relative;
+    color: $color-violet-lightest;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    &:not(:first-child){
+      margin-left: 18px;
+      &:after{
+        @include pseudo;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -11px;
+        width: 5px;
+        height: 5px;
+        background-color: $color-orange;
+        border-radius: 50%;
+      }
+    }
+  }
+}

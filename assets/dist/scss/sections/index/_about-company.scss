@@ -1,0 +1,94 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.about-company{
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 79px 0 58px;
+  &__title-main{
+    padding: 0 15px;
+  }
+
+  &__description{
+    margin-top: 23px;
+    padding: 0 15px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 28px;
+    a{
+      font-weight: 400;
+      color: $color-blue;
+    }
+  }
+
+  &__content{
+    margin-top: 50px;
+    padding: 0 15px;
+  }
+  &__text{
+    margin-top: 20px;
+    line-height: 30px;
+  }
+
+  &__services{
+    position: relative;
+    margin-top: 78px;
+    background-color: $color-blue;
+    background-image: url('../img/home/about-company-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &:after{
+      @include pseudo;
+      left: 0;
+      top: 0;
+      width: 31%;
+      height: 86px;
+      background-color: $white;
+    }
+  }
+
+  &__info-content{
+    padding-top: 31px;
+    padding-bottom: 60px;
+  }
+
+  &__info-content-list{
+    margin-top: 23px;
+  }
+
+  &__clients-wrapper{
+    margin-top: 34px;
+    padding: 0 15px;
+  }
+
+  &__clients{
+    @include ul-reset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__clients-item{
+    display: flex;
+    align-items: center;
+    flex-basis: 42%;
+    margin-top: 29px;
+    img{
+      display: block;
+      max-width: 116px;
+      margin: 0 auto;
+    }
+  }
+  &__wrapper-img{
+    height: 207px;
+    margin-top: 38px;
+    img{
+      object-fit: cover;
+      object-position: center center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.info-content {
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: $font-family-Din-pro-cond;
+    font-weight: 900;
+    font-size: 22px;
+    color: $color-orange;
+    letter-spacing: 0.255rem;
+    &--small{
+      max-width: 198px;
+      margin-left: auto;
+    }
+  }
+
+  &__list{
+    color: $white;
+
+    &--small{
+      max-width: 268px;
+      margin: 0 auto;
+    }
+  }
+
+  &__item{
+    line-height: 26px;
+    &:not(:first-child){
+      margin-top: 10px;
+    }
+  }
+}

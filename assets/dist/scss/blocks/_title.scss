@@ -1,13 +1,22 @@
 .title {
   margin: 0;
-  font-family: 'Cormorant Garamond';
-  font-weight: 700;
-  font-size: 30px;
-  text-align: center;
+  //font-family: 'Cormorant Garamond';
+  //font-weight: 700;
+  //font-size: 30px;
+  //text-align: center;
   @media (min-width: $screen-md) {
-    font-size: 35px;
+    //font-size: 35px;
   }
   @media (min-width: $screen-xl) {
-    font-size: 50px;
+    //font-size: 50px;
+  }
+
+  &--orange{
+    text-transform: uppercase;
+    font-family: $font-family-Din-pro-cond;
+    font-weight: 900;
+    font-size: 22px;
+    color: $color-orange;
+    letter-spacing: 0.27rem;
   }
 }
