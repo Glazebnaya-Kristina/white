@@ -1,0 +1,143 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.methodology{
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  padding-top: 81px;
+  color: $white;
+  background-color: $color-blue;
+  background-image: url('../img/home/methodology-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media (min-width: $screen-xl) {
+    padding-top: 111px;
+  }
+  &:after{
+    @include pseudo;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    height: 72px;
+    background-color: $white;
+    @media (min-width: $screen-md) {
+      width: 14.5%;
+      height: 107px;
+    }
+  }
+  &__inner{
+    @include container;
+  }
+
+  &__description{
+    font-size: 20px;
+    @media (min-width: $screen-xl) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    strong{
+      margin-left: 5px;
+      font-family: $font-family-Din-pro-cond;
+      color: $color-orange;
+      text-transform: uppercase;
+      letter-spacing: 0.12rem;
+      font-weight: 900;
+    }
+    p{
+      @media (min-width: $screen-md) {
+        max-width: 653px;
+        margin: 0 auto;
+      }
+      @media (min-width: $screen-xl) {
+        max-width: 975px;
+        margin: 0;
+        margin-left: 66px;
+        font-size: 30px;
+      }
+    }
+  }
+
+  &__list{
+    @include ul-reset;
+    margin-top: 25px;
+    margin-left: 3px;
+    margin-bottom: 92px;
+    @media (min-width: $screen-md) {
+      max-width: 533px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (min-width: $screen-xl) {
+      width: 100%;
+      max-width: 781px;
+      margin-top: 48px;
+      margin-bottom: 97px;
+    }
+  }
+
+  &__item{
+    @media (min-width: $screen-xl) {
+      font-size: 24px;
+    }
+    &:first-child{
+      #{$block-name}__button{
+        display: inline-flex;
+      }
+    }
+    &:not(:first-child){
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 34px;
+      @media (min-width: $screen-xl) {
+        margin-top: 25px;
+      }
+      #{$block-name}__button{
+        margin-left: auto;
+        margin-right: 20px;
+        margin-top: 1px;
+        @media (min-width: $screen-md) {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+
+  &__button{
+    max-width: 180px;
+    width: 100%;
+    letter-spacing: 0.128rem;
+    @media (min-width: $screen-md) {
+      margin-left: 15px;
+    }
+    @media (min-width: $screen-xl) {
+      max-width: none;
+      width: auto;
+      margin-top: 9px;
+      margin-left: 10px;
+      letter-spacing: 0.2rem;
+    }
+  }
+
+  .title-main{
+    margin-left: -17px;
+    @media (min-width: $screen-md) {
+      margin-left: -34px;
+    }
+    @media (min-width: 1715px) {
+      margin-left: -183px;
+    }
+  }
+  .title-main__title{
+    padding-right: 0;
+    font-size: 38px;
+    line-height: 30px;
+    @media (min-width: $screen-xl) {
+      font-size: 139px;
+      line-height: 90px;
+    }
+  }
+}

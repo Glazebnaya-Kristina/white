@@ -99,4 +99,10 @@
       }
     }
   }
+
+  &--white{
+    #{$block-name}__title{
+      color: $white;
+    }
+  }
 }
