@@ -23,6 +23,7 @@
   }
 
   &__list {
+    @include ul-reset;
     color: $white;
 
     &--small {
@@ -36,11 +37,30 @@
   }
 
   &__item {
+    position: relative;
+    padding-left: 1.5em;
     line-height: 26px;
     &:not(:first-child) {
       margin-top: 10px;
       @media (min-width: $screen-xl) {
         margin-top: 26px;
+      }
+    }
+    @media (min-width: $screen-xl) {
+      padding-left: 1.7em;
+    }
+    &:after{
+      @include pseudo;
+      top: 8px;
+      left: 7px;
+      width: 7px;
+      height: 7px;
+      background-color: $white;
+      border-radius: 50%;
+      @media (min-width: $screen-xl) {
+        left: 0px;
+        width: 10px;
+        height: 10px;
       }
     }
   }
