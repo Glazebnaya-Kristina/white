@@ -6,8 +6,17 @@
   $block-name:                &; // #{$block-name}__element
 
   padding: 79px 0 58px;
+  background-image: url('../img/home/about-company-bg.png');
+  background-repeat: no-repeat;
+  background-position: top 189px right -15px;
+  background-size: 98%;
+  @media (min-width: $screen-md) {
+    background-position: right top -142px;
+    background-size: auto;
+  }
   @media (min-width: $screen-xl) {
     padding-bottom: 202px;
+    background-position: right top -142px;
   }
   &__inner{
     @media (min-width: $screen-lg) {
