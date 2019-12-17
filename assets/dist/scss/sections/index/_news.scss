@@ -13,10 +13,10 @@
     background-position: left center;
   }
   @media (min-width: $screen-lg) {
-    padding: 150px 0 0;
+    padding: 150px 0;
   }
   @media (min-width: $screen-xl) {
-    padding: 233px 0 0;
+    padding: 233px 0 210px;
   }
   &__inner{
     @include container;
