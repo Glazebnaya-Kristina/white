@@ -4,6 +4,7 @@
 // Подключения блоков
 @import "blocks/title-main";
 @import "blocks/info-content";
+@import "blocks/new";
 // поключения библиотек
 //@import "libs/title";
 
@@ -11,3 +12,4 @@
 @import "sections/index/main-banner";
 @import "sections/index/about-company";
 @import "sections/index/methodology";
+@import "sections/index/news";

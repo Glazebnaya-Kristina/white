@@ -29,11 +29,13 @@
     font-size: 24px;
   }
   &--bgc{
-    padding: 6px 9px;
+    height: 35px;
+    padding: 0 9px;
     color: $white;
+    line-height: normal;
     background-color: $color-orange;
     @media (min-width: $screen-xl) {
-      padding: 0px 32px;
+      padding: 0 32px;
     }
     &:hover,
     &:focus{
@@ -50,5 +52,10 @@
       right: -25px;
       font-size: 25px;
     }
+  }
+
+  &--big-size{
+    font-size: 24px;
+    padding: 0 28px;
   }
 }

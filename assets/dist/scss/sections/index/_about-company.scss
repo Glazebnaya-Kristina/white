@@ -48,10 +48,12 @@
     @media (min-width: $screen-lg) {
       max-height: 470px;
       grid-row: 1 / 4;
+      justify-self: center;
     }
     @media (min-width: $screen-xl) {
       grid-row: 1 / 4;
       align-self: flex-end;
+      justify-self: flex-start;
       max-height: 852px;
       height: 100%;
       padding: 0;

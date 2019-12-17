@@ -1,0 +1,118 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.news{
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 56px 0 50px;
+  @media (min-width: $screen-lg) {
+    padding: 150px 0 0;
+  }
+  @media (min-width: $screen-xl) {
+    padding: 233px 0 0;
+  }
+  &__inner{
+    @include container;
+  }
+
+  &__title-main{
+    @media (min-width: $screen-lg) {
+      margin-left: auto;
+    }
+  }
+
+  &__button{
+    margin: 0 auto;
+    margin-top: 80px;
+    letter-spacing: 5px;
+    i{
+      margin-left: 10px;
+    }
+    @media (min-width: $screen-lg) {
+      margin: 0;
+      margin-left: auto;
+      margin-top: -200px;
+    }
+    @media (min-width: $screen-xl) {
+      margin-top: -253px;
+      margin-right: 93px;
+    }
+  }
+
+  &__list{
+    margin-top: 41px;
+    @media (min-width: $screen-lg) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: -131px;
+    }
+    @media (min-width: $screen-xl) {
+      margin-top: -175px;
+    }
+  }
+
+  &__item{
+    flex-basis: 48%;
+    @media (min-width: $screen-xl) {
+      flex-basis: auto;
+    }
+    &:not(:first-child){
+      margin-top: 74px;
+    }
+    &:nth-child(1){
+      @media (min-width: $screen-lg) {
+        order: 1;
+      }
+      @media (min-width: $screen-xl) {
+        max-width: 680px;
+      }
+      .new__header{
+        @media (min-width: $screen-xl) {
+          height: 512px;
+        }
+      }
+      .new__body{
+        @media (min-width: $screen-xl) {
+          max-width: 68%;
+        }
+      }
+    }
+    &:nth-child(2){
+      @media (min-width: $screen-lg) {
+        margin-top: -128px;
+        order: 3;
+      }
+      @media (min-width: $screen-xl) {
+        max-width: 567px;
+        margin-top: -207px;
+      }
+      .new__header{
+        @media (min-width: $screen-xl) {
+          height: 392px;
+        }
+      }
+      .new__body{
+        @media (min-width: $screen-xl) {
+          max-width: 79%;
+        }
+      }
+    }
+    &:nth-child(3){
+      @media (min-width: $screen-lg) {
+        margin-top: 200px;
+        order: 2;
+      }
+      @media (min-width: $screen-xl) {
+        max-width: 460px;
+        margin-top: 325px;
+      }
+      .new__header{
+        @media (min-width: $screen-xl) {
+          height: 484px;
+        }
+      }
+    }
+  }
+}

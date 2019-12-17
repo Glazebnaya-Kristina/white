@@ -75,7 +75,9 @@
       width: 100%;
       max-width: 781px;
       margin-top: 48px;
-      margin-bottom: 97px;
+      //margin-bottom: 97px;
+      //margin-bottom: 67px;
+      margin-bottom: 73px;
     }
   }
 
@@ -132,12 +134,15 @@
     }
   }
   .title-main__title{
-    padding-right: 0;
-    font-size: 38px;
-    line-height: 30px;
+
+    @media (min-width: $screen-xs) and (max-width: 1429px){
+      padding-right: 0;
+      font-size: 48px;
+      line-height: 30px;
+    }
     @media (min-width: $screen-xl) {
-      font-size: 139px;
-      line-height: 90px;
+      //font-size: 139px;
+      //line-height: 90px;
     }
   }
 }

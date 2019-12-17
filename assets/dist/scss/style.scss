@@ -12,7 +12,6 @@
 /*--- в этом файле лежит то что лежало в файле style.scss ---*/
 
 // поключения глобальные блоков
-@import "blocks/button";
 @import "blocks/navigation";
 @import "blocks/social";
 @import "blocks/logo";
@@ -22,4 +21,5 @@
 @import "blocks/modal";
 @import "blocks/close";
 @import "blocks/mouse";
+@import "blocks/button";
 //@import "blocks/breadcrumbs";
