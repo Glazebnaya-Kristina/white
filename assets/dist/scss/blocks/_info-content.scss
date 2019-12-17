@@ -1,5 +1,5 @@
 .info-content {
-
+  $block-name:                &; // #{$block-name}__element
   &__title {
     margin: 0;
     text-transform: uppercase;
@@ -34,22 +34,34 @@
         margin: 0;
       }
     }
+
+    &--reset {
+      #{$block-name}__item{
+        padding: 0;
+        &:after{
+          display: none;
+        }
+      }
+    }
   }
 
   &__item {
     position: relative;
     padding-left: 1.5em;
     line-height: 26px;
+
     &:not(:first-child) {
       margin-top: 10px;
       @media (min-width: $screen-xl) {
         margin-top: 26px;
       }
     }
+
     @media (min-width: $screen-xl) {
       padding-left: 1.7em;
     }
-    &:after{
+
+    &:after {
       @include pseudo;
       top: 8px;
       left: 7px;

@@ -74,9 +74,10 @@
 // миксин для ссылок
 @mixin link ($color-text: inherit, $color-active: inherit) {
   color: $color-text;
-  &:hover,
   &:focus{
     outline: none;
+  }
+  &:hover{
     color: $color-active;
   }
 }
