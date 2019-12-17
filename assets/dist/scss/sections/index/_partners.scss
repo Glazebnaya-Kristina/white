@@ -1,0 +1,106 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.partners{
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 75px 0 81px;
+  @media (min-width: $screen-xl) {
+    padding-bottom: 96px;
+  }
+  &__inner{
+    @include container;
+  }
+
+  &__title-main{
+    @media (min-width: $screen-sm) and (max-width: 767px){
+      .title-main__list{
+        display: block;
+        margin-left: auto;
+        max-width: 256px;
+      }
+      .title-main__item{
+        display: inline;
+        line-height: 36px;
+        &:not(:first-child){
+          &:after{
+            top: 24%;
+            transform: none;
+          }
+        }
+      }
+      .title-main__title{
+        padding-right: 79px;
+      }
+    }
+    @media (min-width: $screen-md) {
+      margin-left: auto;
+    }
+    .title-main__title{
+      @media (min-width: $screen-xl) {
+        padding-right: 164px;
+      }
+    }
+  }
+
+  &__list{
+    @include ul-reset;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 14px 10px;
+    max-width: 410px;
+    margin: 0 auto;
+    margin-top: 35px;
+    padding: 0 15px;
+    @media (min-width: $screen-md) {
+      grid-template-columns: repeat(5, 1fr);
+      max-width: none;
+      margin-top: -78px;
+    }
+    @media (min-width: $screen-xl) {
+      grid-gap: 78px 124px;
+      margin-top: -87px;
+    }
+  }
+
+  &__item{
+    //flex-basis: 48%;
+    //&:not(:first-child){
+    //  margin-left: 10px;
+    //}
+    //&:nth-child(even){
+    //  margin-left: 10px;
+    //}
+    &:last-child{
+      grid-column: 2 / -1;
+      grid-row: 3 / 4;
+      @media (min-width: $screen-md) {
+        grid-column: auto;
+        grid-row: auto;
+      }
+    }
+    &:nth-child(2){
+      grid-column: 2 / -1;
+    }
+
+    img{
+      margin: 0 auto;
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+      filter: grayscale(100%);
+      filter: gray;
+      transition: $transition-time;
+      &:hover{
+        -webkit-filter: grayscale(0);
+        -moz-filter: grayscale(0);
+        -ms-filter: grayscale(0);
+        -o-filter: grayscale(0);
+        filter: grayscale(0);
+        filter: gray;
+      }
+    }
+  }
+}
