@@ -5,7 +5,7 @@
 .partners{
   $block-name:                &; // #{$block-name}__element
 
-  padding: 75px 0 81px;
+  padding: 75px 0 83px;
   @media (min-width: $screen-xl) {
     padding-bottom: 96px;
   }
@@ -14,34 +14,43 @@
   }
 
   &__title-main{
-    @media (min-width: $screen-sm) and (max-width: 767px){
-      .title-main__list{
+    @media (min-width: $screen-md) {
+      margin-left: auto;
+    }
+
+    .title-main__list{
+      @media (min-width: $screen-xs) and (max-width: 767px){
         display: block;
         margin-left: auto;
         max-width: 256px;
       }
-      .title-main__item{
+    }
+    .title-main__item{
+      @media (min-width: $screen-xs) and (max-width: 767px){
         display: inline;
         line-height: 36px;
-        &:not(:first-child){
-          &:after{
+      }
+      &:not(:first-child){
+        &:after{
+          @media (min-width: $screen-xs) and (max-width: 767px){
             top: 24%;
             transform: none;
           }
         }
       }
-      .title-main__title{
-        padding-right: 79px;
-      }
-    }
-    @media (min-width: $screen-md) {
-      margin-left: auto;
     }
     .title-main__title{
+      @media (min-width: $screen-xs) and (max-width: 767px){
+        padding-right: 79px;
+      }
       @media (min-width: $screen-xl) {
         padding-right: 164px;
       }
     }
+
+    //.title-main__title{
+    //
+    //}
   }
 
   &__list{
@@ -65,13 +74,6 @@
   }
 
   &__item{
-    //flex-basis: 48%;
-    //&:not(:first-child){
-    //  margin-left: 10px;
-    //}
-    //&:nth-child(even){
-    //  margin-left: 10px;
-    //}
     &:last-child{
       grid-column: 2 / -1;
       grid-row: 3 / 4;

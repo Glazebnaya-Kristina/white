@@ -1,0 +1,14 @@
+.copyright{
+  margin-top: 35px;
+  padding: 32px 0;
+  font-size: 14px;
+  text-align: center;
+  color: $white;
+  letter-spacing: 0.1rem;
+  background-color: #100c28;
+
+  @media (min-width: $screen-lg) {
+    margin-top: 61px;
+    padding: 8px 0;
+  }
+}

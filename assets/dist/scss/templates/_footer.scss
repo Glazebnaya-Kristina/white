@@ -1,11 +1,38 @@
-// Подключения блоков
-//@import "../blocks/button";
-// Подключения спомогательных файлов
-//@import "../helper/animations";
-//
-// Подключения бибилиотек
+@import "../helper/variables";
+@import "../helper/mixins";
+@import "../helper/container-mixins";
 
 .footer{
   $block-name:                &; // #{$block-name}__element
+
+  padding-top: 43px;
+  background-color: $color-blue;
+  background-image: url('../img/home/footer-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  @media (min-width: $screen-lg) {
+    padding-top: 59px;
+  }
+
+  &__inner{
+    @include container;
+    @media (min-width: $screen-lg) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__title{
+    @include hide-text;
+  }
+
+  &__company-info{
+    margin-top: 39px;
+    @media (min-width: $screen-lg) {
+      margin-top: 0;
+    }
+  }
 
 }

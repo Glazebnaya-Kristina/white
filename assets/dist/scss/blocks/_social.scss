@@ -4,11 +4,24 @@
   @include ul-reset;
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  li{
+    &:not(:first-child){
+      margin-left: 42px;
+    }
+  }
 
   a{
+    padding: 10px 7px;
+    color: $white;
+    border: 1px solid $white;
+    border-radius: 50%;
     &:hover,
     &:focus {
       outline: none;
+      border-color: $color-orange;
+      background-color: $color-orange;
     }
   }
 
