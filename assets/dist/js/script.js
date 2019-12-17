@@ -5,7 +5,13 @@ $(document).ready(function () {
 
       $('.menu-burger').toggleClass('menu-burger--open');
       $('.navigation').toggleClass('navigation--opened');
-      $('body').toggleClass('hidden')
+      $('body').toggleClass('hidden');
+   });
+
+   $('.page__main').on('click', function(e){
+      $('.menu-burger').removeClass('menu-burger--open');
+      $('.navigation').removeClass('navigation--opened');
+      $('body').removeClass('hidden');
    });
 
    //якорные ссылки
