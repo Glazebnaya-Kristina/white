@@ -2,7 +2,6 @@
   $block-name:                &; // #{$block-name}__element
 
   @include ul-reset;
-
   &__header{
     position: relative;
     height: 295px;

@@ -6,6 +6,12 @@
   $block-name:                &; // #{$block-name}__element
 
   padding: 56px 0 50px;
+  background-image: url('../img/home/new-bg.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  @media (min-width: $screen-md) {
+    background-position: left center;
+  }
   @media (min-width: $screen-lg) {
     padding: 150px 0 0;
   }
@@ -26,9 +32,6 @@
     margin: 0 auto;
     margin-top: 80px;
     letter-spacing: 5px;
-    i{
-      margin-left: 10px;
-    }
     @media (min-width: $screen-lg) {
       margin: 0;
       margin-left: auto;
