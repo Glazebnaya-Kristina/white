@@ -1,0 +1,105 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.main-news {
+  $block-name: &; // #{$block-name}__element
+
+  padding: 48px 0 94px;
+  @media (min-width: $screen-xl) {
+    padding: 66px 0 94px;
+  }
+
+  &__inner {
+    @include container;
+  }
+
+  &__title {
+    text-align: right;
+  }
+
+  .new {
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    @media (min-width: $screen-xl) {
+      padding: 0 15px;
+      padding-right: 30px;
+    }
+  }
+
+  .new__item {
+    display: none;
+    @media (min-width: $screen-md) {
+      flex-basis: 48%;
+      margin-bottom: 35px;
+    }
+    @media (min-width: $screen-xl) {
+      margin-bottom: 52px;
+    }
+    @media (min-width: $screen-xl) {
+      flex-basis: 30.3%;
+    }
+
+    &:not(:first-child) {
+      margin-top: 60px;
+      @media (min-width: $screen-md) {
+        margin-top: 0;
+      }
+    }
+
+    &:nth-child(even) {
+      @media (min-width: $screen-md) {
+        margin-top: 37px;
+      }
+      @media (min-width: $screen-xl) {
+        margin-top: 0;
+      }
+    }
+    &:nth-child(2),
+    &:nth-child(3n + 2){
+      @media (min-width: $screen-xl) {
+        margin-top: 37px;
+      }
+    }
+  }
+
+  .new__body {
+    @media (min-width: $screen-md) {
+      max-width: 73%;
+      margin-top: -88px;
+      padding: 15px 15px;
+    }
+    @media (min-width: $screen-lg) {
+      padding: 20px 31px;
+    }
+    @media (min-width: $screen-xl) {
+      max-width: 86%;
+      margin-right: -52px;
+    }
+  }
+
+  .new__footer{
+    @media (min-width: $screen-md) {
+      max-width: 73%;
+      padding: 0 15px;
+    }
+    @media (min-width: $screen-lg) {
+      padding: 0 31px;
+    }
+  }
+
+  .new__header{
+
+  }
+
+  &__button {
+    margin: 0 auto;
+    margin-top: 75px;
+    @media (min-width: $screen-xl) {
+      margin-top: 67px;
+    }
+  }
+}

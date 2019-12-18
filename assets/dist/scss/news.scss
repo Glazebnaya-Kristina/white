@@ -1,0 +1,31 @@
+// стили шаблонов
+@import "templates/header";
+@import "templates/footer";
+// Подключения блоков
+//@import "blocks/title-main";
+//@import "blocks/info-content";
+@import "blocks/new";
+// поключения библиотек
+//@import "libs/slick";
+
+// поключения секций
+@import "sections/news/main-news";
+
+
+
+.page{
+  &__body{
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    @media (min-width: $screen-xl) {
+      background-image: url('../img/news/news-bg.jpg');
+    }
+  }
+
+  &__title{
+    @include container;
+    margin-top: 65px;
+  }
+}

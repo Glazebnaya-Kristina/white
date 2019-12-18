@@ -1,15 +1,17 @@
-.new{
-  $block-name:                &; // #{$block-name}__element
+.new {
+  $block-name: &; // #{$block-name}__element
 
   @include ul-reset;
-  &__header{
+
+  &__header {
     position: relative;
     height: 295px;
     margin: 0 -15px;
     @media (min-width: $screen-md) {
       margin: 0;
     }
-    &:after{
+
+    &:after {
       @include pseudo;
       right: 0;
       bottom: 0;
@@ -21,7 +23,7 @@
       }
     }
 
-    img{
+    img {
       object-fit: cover;
       object-position: center center;
       width: 100%;
@@ -29,7 +31,7 @@
     }
   }
 
-  &__body{
+  &__body {
     margin-top: 36px;
     background-color: $white;
     @media (min-width: $screen-md) {
@@ -41,7 +43,8 @@
       padding: 37px 43px;
       padding-right: 11px;
     }
-    h3{
+
+    h3 {
       margin: 0;
       text-transform: uppercase;
       font-family: $font-family-Din-pro-cond;
@@ -54,13 +57,43 @@
       }
     }
 
-    p{
+    p {
       margin-top: 7px;
       font-weight: 500;
       font-size: 18px;
       @media (min-width: $screen-xl) {
         margin-top: 18px;
         font-size: 20px;
+      }
+    }
+  }
+
+  &__footer {
+    position: relative;
+    margin-top: 20px;
+    @media (min-width: $screen-md) {
+      max-width: 76%;
+      margin-top: -17px;
+      margin-left: auto;
+      padding: 0 43px;
+      padding-right: 11px;
+    }
+    @media (min-width: $screen-xl) {
+      margin-top: 5px;
+    }
+    a {
+      font-size: 18px;
+      color: $color-blue;
+      font-family: $font-family-Din-pro-cond;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      line-height: normal;
+      border-bottom: 1px solid transparent;
+      &:hover,
+      &:focus{
+        border-color: $color-blue;
+        outline: none;
       }
     }
   }
