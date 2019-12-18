@@ -1,0 +1,26 @@
+// стили шаблонов
+@import "templates/header";
+@import "templates/footer";
+
+// поключения секций
+@import "sections/new-inner/article";
+
+
+
+.page{
+  &__body{
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    @media (min-width: $screen-xl) {
+      background-image: url('../img/news/news-bg.jpg');
+    }
+  }
+
+  &__title{
+    @include container;
+    margin-top: 65px;
+    text-align: right;
+  }
+}

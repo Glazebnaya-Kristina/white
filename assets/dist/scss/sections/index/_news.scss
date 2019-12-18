@@ -29,8 +29,10 @@
   }
 
   &__button{
+    max-width: 256px;
     margin: 0 auto;
     margin-top: 85px;
+    font-size: 24px;
     letter-spacing: 5px;
     @media (min-width: $screen-lg) {
       margin: 0;

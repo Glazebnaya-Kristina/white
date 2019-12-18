@@ -53,7 +53,8 @@ module.exports = function (grunt) {
                'markup/js/jcf.min.js': ['assets/dist/js/plugin/jcf.js'],
                'markup/js/script.min.js': ['assets/dist/js/script.js'],
                'markup/js/home.min.js': ['assets/dist/js/home.js'],
-               'markup/js/news.min.js': ['assets/dist/js/news.js']
+               'markup/js/news.min.js': ['assets/dist/js/news.js'],
+               'markup/js/new-inner.min.js': ['assets/dist/js/new-inner.js']
             }
          }
       },

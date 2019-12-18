@@ -37,9 +37,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  //@media (min-width: $screen-lg) {
-  //  font-size: $font-size;
-  //}
 }
 
 .hidden{
@@ -49,6 +46,15 @@ body {
 .anchor{
   @include hide-text;
 }
+
+
+::selection {
+  background: rgba($color-orange, .3); /* Safari */
+}
+::-moz-selection {
+  background: rgba($color-orange, .3); /* Firefox */
+}
+
 
 [tabindex='-1']:focus {
   outline: 0 !important;
