@@ -84,6 +84,33 @@
 // миксин для ссылок
 
 
+// миксин обецвечивание
+@mixin mask ($percent: 100%, $percentHover: 0){
+  -webkit-filter: grayscale($percent);
+  -moz-filter: grayscale($percent);
+  -ms-filter: grayscale($percent);
+  -o-filter: grayscale($percent);
+  filter: grayscale($percent);
+  filter: gray;
+  transition: $transition-time;
+  &:hover{
+    -webkit-filter: grayscale($percentHover);
+    -moz-filter: grayscale($percentHover);
+    -ms-filter: grayscale($percentHover);
+    -o-filter: grayscale($percentHover);
+    filter: grayscale($percentHover);
+    filter: gray;
+  }
+}
+
+
+@mixin img {
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height: 100%;
+}
+
 
 
 

@@ -1,0 +1,39 @@
+// стили шаблонов
+@import "templates/header";
+@import "templates/footer";
+
+// Подключения блоков
+//@import "blocks/title-main";
+
+// поключения секций
+@import "sections/projects/gallery";
+
+
+
+.page{
+  &__body{
+    background-image: url('../img/lines.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+  &__title{
+    @include container;
+    margin-top: 65px;
+    text-align: right;
+  }
+
+  &__header-projects{
+    padding: 67px 0 346px;
+    background-image: url('../img/projects/header-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top right -360px;
+    background-size: cover;
+    @media (min-width: $screen-lg) {
+      background-position: top center;
+    }
+    .page__title{
+      margin-top: 0;
+    }
+  }
+}

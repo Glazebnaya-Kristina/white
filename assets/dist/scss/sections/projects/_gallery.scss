@@ -1,0 +1,83 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.gallery{
+  $block-name: &; // #{$block-name}__element
+
+  margin-top: -292px;
+  padding-bottom: 53px;
+  &__inner{
+    @include container;
+  }
+
+  &__list{
+    @include ul-reset;
+    margin-top: 105px;
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    @media (min-width: $screen-xl) {
+      margin-top: 62px;
+      padding: 0 20px;
+    }
+  }
+
+  &__item{
+    display: none;
+    height: 191px;
+
+    @media (min-width: $screen-md) {
+      flex-basis: 48%;
+      margin-bottom: 35px;
+    }
+    @media (min-width: $screen-lg) {
+      margin-bottom: 20px;
+      height: 272px;
+    }
+    @media (min-width: $screen-xl) {
+      flex-basis: 31%;
+    }
+
+    &:not(:first-child) {
+      margin-top: 23px;
+      @media (min-width: $screen-md) {
+        margin-top: 0;
+      }
+    }
+
+    &:nth-child(even) {
+      @media (min-width: $screen-md) {
+        margin-top: 37px;
+      }
+      @media (min-width: $screen-xl) {
+        margin-top: 0;
+      }
+    }
+    &:nth-child(2),
+    &:nth-child(3n + 2){
+      @media (min-width: $screen-xl) {
+        margin-top: 37px;
+      }
+    }
+
+    a{
+      width: 100%;
+      height: inherit;
+    }
+    img{
+      @include mask;
+      @include img;
+    }
+  }
+
+  &__button{
+    margin: 0 auto;
+    margin-top: 61px;
+    @media (min-width: $screen-xl) {
+      margin-top: 72px;
+    }
+  }
+}
