@@ -2,19 +2,24 @@
 @import "templates/header";
 @import "templates/footer";
 
+// Подключения библиотек
+@import "libs/slick";
+
 // Подключения блоков
 //@import "blocks/title-main";
 
 // поключения секций
 @import "sections/projects/gallery";
+@import "sections/projects/reviews";
 
 
 
 .page{
   &__body{
-    background-image: url('../img/lines.png');
+    background-image: url('../img/projects/reviews-line.png');
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: top right 146px;
+    background-size: 81% 100%;
   }
 
   &__title{
@@ -24,6 +29,7 @@
   }
 
   &__header-projects{
+    position: relative;
     padding: 67px 0 346px;
     background-image: url('../img/projects/header-bg.jpg');
     background-repeat: no-repeat;
@@ -31,6 +37,21 @@
     background-size: cover;
     @media (min-width: $screen-lg) {
       background-position: top center;
+    }
+    @media (min-width: $screen-xl) {
+      padding: 67px 0 326px;
+    }
+    &:before {
+      @include pseudo;
+      right: 0;
+      bottom: 0;
+      width: 30%;
+      height: 75px;
+      background-color: $white;
+      @media (min-width: $screen-lg) {
+        width: 14.3%;
+        height: 83px;
+      }
     }
     .page__title{
       margin-top: 0;

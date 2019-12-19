@@ -1,0 +1,120 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.reviews{
+  $block-name: &; // #{$block-name}__element
+
+  position: relative;
+  padding: 98px 0 135px;
+  background-color: $color-grey-lightest;
+  background-image: url('../img/projects/reviews-line.png');
+  background-repeat: no-repeat;
+  background-position: top right 146px;
+  background-size: 81% 100%;
+  overflow: hidden;
+  &:after {
+    @include pseudo;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 75px;
+    background-color: $white;
+    @media (min-width: $screen-lg) {
+      width: 7%;
+      height: 131px;
+    }
+  }
+  &:before {
+    @include pseudo;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    height: 75px;
+    background-color: $white;
+    @media (min-width: $screen-lg) {
+      width: 10%;
+      height: 118px;
+    }
+  }
+  @media (min-width: $screen-xl) {
+    padding: 86px 0 105px;
+  }
+  &__inner{
+    @include container;
+  }
+  &__carousel{
+    @include ul-reset;
+    margin-top: 52px;
+    padding: 0 20px;
+    @media (min-width: $screen-xl) {
+      margin: 51px -29px 0;
+      padding: 0;
+    }
+  }
+
+  &__item{
+    outline: none;
+    @media (min-width: $screen-xl) {
+      margin: 0 29px;
+    }
+    img{
+      display: block;
+      margin: 0 auto;
+      height: 355px;
+      border: 1px solid #cccccc;
+      @media (min-width: $screen-xl) {
+        height: 413px;
+      }
+    }
+
+    p{
+      display: none;
+      margin-top: 35px;
+      text-align: center;
+      font-size: 20px;
+      @media (min-width: $screen-md) {
+        display: block;
+      }
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    cursor: pointer;
+    font-size: 20px;
+    color: $black;
+    &:hover{
+      color: $color-blue;
+    }
+    &:focus{
+      outline: none;
+      color: #474747;
+    }
+
+    &--left {
+      left: -9px;
+      top: 50%;
+      transform: translateY(-50%) rotate(180deg);
+      @media (min-width: $screen-xl) {
+        left: -33px;
+        top: 41%;
+        transform: translateY(0) rotate(180deg);
+      }
+    }
+
+    &--right {
+      right: -9px;
+      top: 50%;
+      transform: translateY(-50%);
+      @media (min-width: $screen-xl) {
+        right: -33px;
+        top: 41%;
+        transform: none;
+      }
+    }
+  }
+}
+
+
+@media (min-width: $screen-xl) {}
