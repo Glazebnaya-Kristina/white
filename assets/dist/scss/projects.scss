@@ -6,11 +6,12 @@
 @import "libs/slick";
 
 // Подключения блоков
-//@import "blocks/title-main";
+@import "blocks/step-count";
 
 // поключения секций
 @import "sections/projects/gallery";
 @import "sections/projects/reviews";
+@import "sections/projects/customers";
 
 
 

@@ -1,0 +1,102 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.customers{
+  $block-name: &; // #{$block-name}__element
+
+  padding: 63px 0 85px;
+  @media (min-width: $screen-xl) {
+    padding: 110px 0 91px;
+  }
+  &__inner{
+    @include container;
+  }
+  &__carousel{
+    @include ul-reset;
+    margin-top: 50px;
+    margin-bottom: 31px;
+    @media (min-width: $screen-lg) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    @media (min-width: $screen-xl) {
+      margin-bottom: 69px;
+    }
+  }
+
+  &__item{
+    display: flex !important;
+    height: 70px;
+    outline: none;
+    @media (min-width: $screen-lg) {
+      flex-basis: 16%;
+    }
+    @media (min-width: $screen-xl) {
+      flex-basis: 228px;
+      height: 156px;
+    }
+    img{
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .slick-slide{
+    outline: none;
+  }
+
+  &__wrapper-controls{
+    position: relative;
+    max-width: 97px;
+    margin: 0 auto;
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    cursor: pointer;
+    font-size: 17px;
+    color: $black;
+    &:hover{
+      color: $color-blue;
+    }
+    &:focus{
+      outline: none;
+      color: #474747;
+    }
+
+    &--left {
+      left: -9px;
+      top: 50%;
+      transform: translateY(-50%) rotate(180deg);
+      @media (min-width: $screen-xl) {
+        left: -33px;
+        top: 41%;
+        transform: translateY(0) rotate(180deg);
+      }
+    }
+
+    &--right {
+      right: -9px;
+      top: 50%;
+      transform: translateY(-50%);
+      @media (min-width: $screen-xl) {
+        right: -33px;
+        top: 41%;
+        transform: none;
+      }
+    }
+  }
+
+  &__button{
+    display: none;
+    @media (min-width: $screen-lg) {
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+}
