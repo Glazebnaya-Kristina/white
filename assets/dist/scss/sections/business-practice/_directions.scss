@@ -38,8 +38,13 @@
 
     #{$block-name}__title-main-title {
       @media (min-width: $screen-xl) {
-        line-height: 160px;
+        line-height: 127px;
+        font-size: 135px;
         margin-left: 0;
+      }
+      @media (min-width: 1800px) {
+        line-height: 160px;
+        font-size: 164px;
       }
     }
   }
