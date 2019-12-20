@@ -2,17 +2,23 @@
 @import "../../helper/mixins";
 
 
-.directions{
-  $block-name:                &; // #{$block-name}__element
+.directions {
+  $block-name: &; // #{$block-name}__element
 
   padding: 38px 0 70px;
-  &__inner{
+  @media (min-width: $screen-xl) {
+    margin-top: -290px;
+    padding-bottom: 113px;
+  }
+
+  &__inner {
     position: relative;
     @media (min-width: $screen-lg) {
       @include container;
     }
   }
-  &__title-main{
+
+  &__title-main {
     padding: 0 15px;
     @media (min-width: $screen-lg) {
       position: absolute;
@@ -25,13 +31,19 @@
       bottom: 0;
     }
 
-    #{$block-name}__title-main-title{
+    @media (min-width: 1900px) {
+      right: -216px;
+      bottom: -19px;
+    }
+
+    #{$block-name}__title-main-title {
       @media (min-width: $screen-xl) {
         line-height: 160px;
       }
     }
   }
-  &__title-main-title{
+
+  &__title-main-title {
     @media (max-width: 767px) {
       padding-right: 0;
       font-size: 56px;
@@ -39,15 +51,19 @@
     @media (min-width: $screen-lg) {
       line-height: 80px;
     }
-
   }
-  &__title-main-list{
+
+  &__title-main-list {
     padding-right: 65px;
     @media (min-width: $screen-lg) {
       justify-content: flex-start;
     }
+    @media (min-width: $screen-xl) {
+      margin-left: 17px;
+    }
   }
-  &__wrapper{
+
+  &__wrapper {
     position: relative;
     margin-top: 34px;
     background-color: $color-blue;
@@ -60,11 +76,13 @@
       margin-left: -287px;
     }
     @media (min-width: $screen-xl) {
-      width: 773px;
+      //width: 773px;
+      width: 1010px;
       margin-left: -291px;
       margin-top: 127px;
     }
-    &:after{
+
+    &:after {
       @include pseudo;
       left: 0;
       top: 0;
@@ -75,13 +93,13 @@
         width: 46%;
       }
       @media (min-width: $screen-xl) {
-        width: 21%;
+        width: 39.5%;
         height: 135px;
       }
     }
   }
 
-  &__info-content{
+  &__info-content {
     max-width: 345px;
     margin: 0 auto;
     padding-top: 96px;
@@ -96,18 +114,23 @@
       padding-top: 70px;
     }
     @media (min-width: $screen-xl) {
-      max-width: 481px;
-      padding-bottom: 111px;
+      //max-width: 481px;
+      max-width: 526px;
+      padding-top: 101px;
       padding-right: 30px;
+      padding-bottom: 184px;
     }
   }
 
-  &__info-content-title{
+  &__info-content-title {
     max-width: 200px;
     margin: 0 auto;
+    @media (min-width: $screen-xl) {
+      max-width: none;
+    }
   }
 
-  &__info-content-list{
+  &__info-content-list {
     margin-top: 23px;
     @media (min-width: $screen-lg) {
       margin-top: 70px;
@@ -115,5 +138,8 @@
     @media (min-width: $screen-lg) {
       margin-top: 79px;
     }
+    //@media (min-width: $screen-xl) {
+    //  font-size: 24px;
+    //}
   }
 }
