@@ -28,17 +28,18 @@
     @media (min-width: $screen-xl) {
       height: 855px;
       max-height: none;
-      bottom: 0;
+      bottom: -19px;
+      right: -29px;
     }
 
-    @media (min-width: 1900px) {
-      right: -216px;
-      bottom: -19px;
+    @media (min-width: 1800px) {
+      right: -190px;
     }
 
     #{$block-name}__title-main-title {
       @media (min-width: $screen-xl) {
         line-height: 160px;
+        margin-left: 0;
       }
     }
   }
