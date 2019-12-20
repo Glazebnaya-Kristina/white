@@ -1,0 +1,41 @@
+.header-top{
+  position: relative;
+  padding: 67px 0 346px;
+  background-image: url('../img/projects/header-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: top right -360px;
+  background-size: cover;
+  @media (min-width: $screen-lg) {
+    background-position: top center;
+  }
+  @media (min-width: $screen-xl) {
+    padding: 67px 0 326px;
+  }
+  &:before {
+    @include pseudo;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    height: 75px;
+    background-color: $white;
+    @media (min-width: $screen-lg) {
+      width: 14.3%;
+      height: 83px;
+    }
+  }
+
+  &__inner{
+    @include container;
+    margin-top: 0;
+  }
+
+  h1{
+    text-align: right;
+  }
+  p{
+    line-height: 28px;
+    font-weight: 300;
+    font-size: 20px;
+    color: $white;
+  }
+}
