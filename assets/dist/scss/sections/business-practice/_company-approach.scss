@@ -9,10 +9,27 @@
 
   &__inner{
     @include container;
+    @media (min-width: $screen-xl) {
+      display: flex;
+    }
   }
 
   &__title-main{
+    @media (min-width: $screen-xl) {
+      flex-shrink: 0;
+      //max-width: 688px;
+      max-width: 591px;
+      margin-left: -186px;
+      margin-top: 46px;
+    }
 
+    .title-main__title{
+      @media (min-width: $screen-xl) {
+        margin: 0;
+        padding: 0;
+        line-height: 165px;
+      }
+    }
   }
   &__list{
     @include ul-reset;
@@ -25,11 +42,19 @@
       justify-content: space-between;
       margin-top: 60px;
     }
+    @media (min-width: $screen-xl) {
+      max-width: 860px;
+      margin-top: 34px;
+      margin-left: auto;
+    }
   }
 
   &__item{
     @media (min-width: $screen-md) {
       flex-basis: 48%;
+    }
+    @media (min-width: $screen-xl) {
+      flex-basis: 45%;
     }
     &:not(:first-child){
       margin-top: 49px;
@@ -40,6 +65,9 @@
     &:nth-child(1){
       @media (min-width: $screen-md) {
         margin-top: 60px;
+      }
+      @media (min-width: $screen-xl) {
+        margin-top: 50px;
       }
     }
     &:nth-child(2){
@@ -53,6 +81,10 @@
         margin-left: auto;
         margin-top: -20px;
       }
+      @media (min-width: $screen-xl) {
+        margin-top: -17px;
+        margin-right: 82px;
+      }
     }
   }
 
@@ -60,6 +92,10 @@
     margin-top: 20px;
     line-height: 30px;
     font-weight: 300;
+    @media (min-width: $screen-xl) {
+      margin-top: 41px;
+      padding-right: 49px;
+    }
   }
 }
 
