@@ -6,17 +6,46 @@
   $block-name:                &; // #{$block-name}__element
 
   padding: 38px 0 70px;
+  &__inner{
+    position: relative;
+    @media (min-width: $screen-lg) {
+      @include container;
+    }
+  }
   &__title-main{
     padding: 0 15px;
+    @media (min-width: $screen-lg) {
+      position: absolute;
+      right: 134px;
+      max-height: 400px;
+    }
+    @media (min-width: $screen-xl) {
+      height: 855px;
+      max-height: none;
+      bottom: 0;
+    }
+
+    #{$block-name}__title-main-title{
+      @media (min-width: $screen-xl) {
+        line-height: 160px;
+      }
+    }
   }
   &__title-main-title{
     @media (max-width: 767px) {
       padding-right: 0;
       font-size: 56px;
     }
+    @media (min-width: $screen-lg) {
+      line-height: 80px;
+    }
+
   }
   &__title-main-list{
     padding-right: 65px;
+    @media (min-width: $screen-lg) {
+      justify-content: flex-start;
+    }
   }
   &__wrapper{
     position: relative;
@@ -28,7 +57,7 @@
     background-size: cover;
     @media (min-width: $screen-lg) {
       width: 758px;
-      margin-left: -386px;
+      margin-left: -287px;
     }
     @media (min-width: $screen-xl) {
       width: 773px;

@@ -31,7 +31,7 @@
       margin-top: -72px;
       padding: 20px 35px;
       padding-top: 26px;
-      padding-right: 0;
+      padding-right: 20px;
       max-width: 53%;
       width: 100%;
       letter-spacing: 0.22rem;
@@ -39,6 +39,7 @@
       font-weight: 900;
       font-size: 18px;
       color: $color-blue;
+      text-align: center;
       background-color: $white;
       @media (min-width: $screen-md) {
         max-width: 39%;

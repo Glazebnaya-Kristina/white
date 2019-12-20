@@ -27,8 +27,16 @@
  &__header-top{
    padding-bottom: 130px;
    background-image: url('../img/business-practice/header-bg-1.jpg');
+   @media (min-width: $screen-lg) {
+     padding-bottom: 147px;
+   }
    p{
      margin-top: 32px;
+     @media (min-width: $screen-lg) {
+       max-width: 1113px;
+       margin: 0 auto;
+       margin-top: 74px;
+     }
    }
  }
 }
