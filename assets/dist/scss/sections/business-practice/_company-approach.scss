@@ -16,25 +16,32 @@
 
   &__title-main{
     @media (min-width: $screen-xl) {
+      margin-top: 46px;
       flex-shrink: 0;
-      //max-width: 688px;
+      max-width: 492px;
+      margin-left: -14px;
+    }
+    @media (min-width: 1800px) {
       max-width: 591px;
       margin-left: -186px;
-      margin-top: 46px;
     }
 
     .title-main__title{
       @media (min-width: $screen-xl) {
         margin: 0;
         padding: 0;
+        line-height: 127px;
+        font-size: 135px;
+      }
+      @media (min-width: 1800px) {
         line-height: 165px;
+        font-size: 164px;
       }
     }
   }
   &__list{
     @include ul-reset;
     margin-top: 31px;
-    //padding: 0 15px;
     padding-right: 20px;
     @media (min-width: $screen-md) {
       display: flex;
