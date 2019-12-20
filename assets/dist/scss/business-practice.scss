@@ -6,9 +6,11 @@
 // Подключения блоков
 @import "blocks/header-top";
 @import "blocks/title-main";
+@import "blocks/info-content";
 
 // поключения секций
 @import "sections/business-practice/company-approach";
+@import "sections/business-practice/directions";
 
 
 
@@ -24,6 +26,7 @@
 .business-practice{
  &__header-top{
    padding-bottom: 130px;
+   background-image: url('../img/business-practice/header-bg-1.jpg');
    p{
      margin-top: 32px;
    }

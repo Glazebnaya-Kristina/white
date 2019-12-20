@@ -1,0 +1,90 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.directions{
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 38px 0 70px;
+  &__title-main{
+    padding: 0 15px;
+  }
+  &__title-main-title{
+    @media (max-width: 767px) {
+      padding-right: 0;
+      font-size: 56px;
+    }
+  }
+  &__title-main-list{
+    padding-right: 65px;
+  }
+  &__wrapper{
+    position: relative;
+    margin-top: 34px;
+    background-color: $color-blue;
+    background-image: url('../img/business-practice/directions-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    @media (min-width: $screen-lg) {
+      width: 758px;
+      margin-left: -386px;
+    }
+    @media (min-width: $screen-xl) {
+      width: 773px;
+      margin-left: -291px;
+      margin-top: 127px;
+    }
+    &:after{
+      @include pseudo;
+      left: 0;
+      top: 0;
+      width: 30%;
+      height: 71px;
+      background-color: $white;
+      @media (min-width: $screen-lg) {
+        width: 46%;
+      }
+      @media (min-width: $screen-xl) {
+        width: 21%;
+        height: 135px;
+      }
+    }
+  }
+
+  &__info-content{
+    max-width: 345px;
+    margin: 0 auto;
+    padding-top: 96px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 93px;
+    @media (min-width: $screen-lg) {
+      max-width: 380px;
+      margin: 0;
+      margin-left: auto;
+      padding-right: 20px;
+      padding-top: 70px;
+    }
+    @media (min-width: $screen-xl) {
+      max-width: 481px;
+      padding-bottom: 111px;
+      padding-right: 30px;
+    }
+  }
+
+  &__info-content-title{
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  &__info-content-list{
+    margin-top: 23px;
+    @media (min-width: $screen-lg) {
+      margin-top: 70px;
+    }
+    @media (min-width: $screen-lg) {
+      margin-top: 79px;
+    }
+  }
+}
