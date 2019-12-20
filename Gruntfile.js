@@ -51,6 +51,7 @@ module.exports = function (grunt) {
                'markup/js/jcf.checkbox.min.js': ['assets/dist/js/plugin/jcf.checkbox.js'],
                'markup/js/jcf.radio.min.js': ['assets/dist/js/plugin/jcf.radio.js'],
                'markup/js/jcf.min.js': ['assets/dist/js/plugin/jcf.js'],
+               'markup/js/jquery.fancybox.min.js': ['assets/dist/js/plugin/jquery.fancybox.js'],
                'markup/js/script.min.js': ['assets/dist/js/script.js'],
                'markup/js/home.min.js': ['assets/dist/js/home.js'],
                'markup/js/news.min.js': ['assets/dist/js/news.js'],
