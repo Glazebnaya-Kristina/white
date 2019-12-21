@@ -1,0 +1,126 @@
+// стили шаблонов
+@import "templates/header";
+@import "templates/footer";
+// Подключения библиотек
+@import "libs/jcf-checkbox";
+// Подключения блоков
+@import "blocks/header-top";
+@import "blocks/title-main";
+@import "blocks/info-content";
+// поключения секций
+@import "sections/contacts/feedback";
+
+
+.page {
+  &__body {
+    background-image: url('../img/projects/reviews-line.png');
+    background-repeat: no-repeat;
+    background-position: top right 571px;
+    background-size: 81% 100%;
+  }
+}
+
+.contacts {
+  &__header-top {
+    padding-bottom: 176px;
+    background-image: url('../img/projects/header-bg.jpg');
+    @media (min-width: $screen-lg) {
+      padding-bottom: 114px;
+    }
+  }
+
+  &__list{
+    @include ul-reset;
+    margin-top: 30px;
+    color: $white;
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: space-between;
+    }
+    @media (min-width: $screen-xl) {
+      justify-content: flex-start;
+      margin-top: 68px;
+      padding-left: 43px;
+    }
+  }
+
+  &__item{
+    @media (min-width: $screen-lg) {
+      display: flex;
+      align-items: flex-start;
+    }
+    &:not(:first-child){
+      margin-top: 41px;
+      @media (min-width: $screen-md) {
+        margin-top: 0;
+      }
+      @media (min-width: $screen-xl) {
+        margin-left: 246px;
+      }
+    }
+    h2{
+      display: flex;
+      align-items: center;
+      margin: 0;
+      margin-bottom: 19px;
+      text-transform: uppercase;
+      font-family: $font-family-Din-pro-cond;
+      font-weight: 900;
+      font-size: 22px;
+      letter-spacing: 0.268rem;
+      @media (min-width: $screen-xl) {
+        margin-bottom: 12px;
+        font-size: 24px;
+      }
+      i{
+        margin-right: 10px;
+        font-size: 23px;
+        color: $color-orange;
+        @media (min-width: $screen-md) {
+          margin-right: 20px;
+        }
+        &:before{
+          margin: 0;
+        }
+      }
+    }
+    a{
+      font-size: 22px;
+      font-weight: 300;
+      @media (min-width: $screen-xl) {
+        letter-spacing: 0.07rem;
+      }
+      &:not(:first-child){
+        margin-top: 7px;
+        @media (min-width: $screen-xl) {
+          margin-top: 15px;
+        }
+      }
+      &:hover,
+      &:focus{
+        color: $color-orange;
+        outline: none;
+      }
+      &:last-child{
+        @media (min-width: $screen-lg) {
+          margin-top: 27px;
+        }
+      }
+    }
+  }
+
+  &__wrapper-link{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 7px;
+    @media (min-width: $screen-lg) {
+      margin-top: 0;
+      margin-left: 45px;
+    }
+    @media (min-width: $screen-xl) {
+      margin-top: 3px;
+      margin-left: 43px;
+    }
+  }
+}

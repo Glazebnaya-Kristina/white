@@ -1,0 +1,124 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.feedback{
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 84px 0 90px;
+  @media (min-width: $screen-xl) {
+    padding: 92px 0 94px;
+  }
+  &__inner{
+    @include container;
+  }
+
+  &__title{
+    text-align: center;
+  }
+
+  &__form{
+    margin-top: 47px;
+    @media (min-width: $screen-xl) {
+      margin: 0 auto;
+      margin-top: 36px;
+      max-width: 1113px;
+    }
+  }
+
+  &__list{
+    @include ul-reset;
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item{
+    @media (min-width: $screen-md) {
+      flex-basis: 48%;
+    }
+    @media (min-width: $screen-xl) {
+      flex-basis: 48.2%;
+    }
+    &:not(:first-child){
+      margin-top: 18px;
+      @media (min-width: $screen-md) {
+        margin-top: 0;
+      }
+    }
+    &:not(:nth-child(1)),
+    &:not(:nth-child(2)){
+      @media (min-width: $screen-md) {
+        margin-top: 40px;
+      }
+      @media (min-width: $screen-xl) {
+        margin-top: 43px;
+      }
+    }
+    &:last-child{
+      @media (min-width: $screen-md) {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  &__input{
+    margin-top: 11px;
+    &--textarea{
+      height: 172px;
+      @media (min-width: $screen-xl) {
+        height: 122px;
+      }
+    }
+  }
+
+  &__button{
+    margin: 0 auto;
+    margin-top: 35px;
+    @media (min-width: $screen-xl) {
+      margin-top: 98px;
+    }
+  }
+
+  &__consent{
+    display: flex;
+    align-items: center;
+    max-width: 234px;
+    margin: 0 auto;
+    margin-top: 19px;
+    @media (min-width: $screen-md) {
+      max-width: none;
+      justify-content: center;
+    }
+    @media (min-width: $screen-xl) {
+      margin-top: 34px;
+    }
+    label{
+      margin-left: 19px;
+      font-size: 14px;
+      font-weight: 300;
+      @media (min-width: $screen-xl) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__button-consent{
+    display: inline;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
+    outline: none;
+    &:hover,
+    &:focus{
+      outline: none;
+      border-bottom: 1px solid $color-black;
+    }
+    @media (min-width: $screen-xl) {
+      font-size: 16px;
+    }
+  }
+}

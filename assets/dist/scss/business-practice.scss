@@ -2,20 +2,17 @@
 // стили шаблонов
 @import "templates/header";
 @import "templates/footer";
-
 // Подключения блоков
 @import "blocks/header-top";
 @import "blocks/title-main";
 @import "blocks/info-content";
-
 // поключения секций
 @import "sections/business-practice/company-approach";
 @import "sections/business-practice/directions";
 
 
-
-.page{
-  &__body{
+.page {
+  &__body {
     background-image: url('../img/projects/reviews-line.png');
     background-repeat: no-repeat;
     background-position: top right 146px;
@@ -23,20 +20,21 @@
   }
 }
 
-.business-practice{
- &__header-top{
-   padding-bottom: 130px;
-   background-image: url('../img/business-practice/header-bg-1.jpg');
-   @media (min-width: $screen-lg) {
-     padding-bottom: 147px;
-   }
-   p{
-     margin-top: 32px;
-     @media (min-width: $screen-lg) {
-       max-width: 1113px;
-       margin: 0 auto;
-       margin-top: 74px;
-     }
-   }
- }
+.business-practice {
+  &__header-top {
+    padding-bottom: 130px;
+    background-image: url('../img/business-practice/header-bg-1.jpg');
+    @media (min-width: $screen-lg) {
+      padding-bottom: 147px;
+    }
+
+    p {
+      margin-top: 32px;
+      @media (min-width: $screen-lg) {
+        max-width: 1113px;
+        margin: 0 auto;
+        margin-top: 74px;
+      }
+    }
+  }
 }

@@ -43,8 +43,10 @@
   }
 
   a{
-    &:hover{
+    &:hover,
+    &:focus{
       color: $color-orange;
+      outline: none;
     }
   }
 }

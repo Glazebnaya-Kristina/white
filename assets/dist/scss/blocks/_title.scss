@@ -18,7 +18,8 @@
     font-family: $font-family-Din-pro-cond;
     font-weight: 500;
     font-size: 35px;
-    letter-spacing: 0.2rem;
+    //letter-spacing: 0.2rem;
+    letter-spacing: 0.26rem;
     color: $color-violet-lightest;
     @media (min-width: $screen-xl) {
       font-size: 47.5px;
