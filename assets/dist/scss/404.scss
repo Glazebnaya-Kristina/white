@@ -1,0 +1,188 @@
+// Подключения библиотек
+@import "helper/animations";
+
+// поключения секций
+@import "sections/404/content-404";
+
+
+.ring {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-52%);
+  z-index: -1;
+  width: 1650px;
+  height: 1650px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+
+  @media screen and (max-width: 1630px) {
+    width: 1400px;
+    height: 1400px;
+  }
+  @media screen and (max-width: 1420px) {
+    width: 1150px;
+    height: 1150px;
+  }
+  @media screen and (max-width: 1180px) {
+    width: 900px;
+    height: 900px;
+  }
+  @media screen and (max-width: 930px) {
+    display: none;
+    width: 750px;
+    height: 750px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 700px;
+    height: 700px;
+  }
+  @media screen and (max-width: 500px) {
+    transform: translateY(-60%);
+    max-width: 300px;
+    height: 300px;
+  }
+
+
+  &__point {
+    width: 8px;
+    height: 8px;
+    background-color: $white;
+    position: absolute;
+    left: calc(50% - 4px);
+    top: calc(50% - 4px);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+
+
+    -webkit-animation: move 16s linear infinite;
+    -moz-animation: move 16s linear infinite;
+    -o-animation: move 16s linear infinite;
+    animation: move 16s linear infinite;
+    @media screen and (max-width: 1630px) {
+      -webkit-animation: move1600px 16s linear infinite;
+      -moz-animation: move1600px 16s linear infinite;
+      -o-animation: move1600px 16s linear infinite;
+      animation: move1600px 16s linear infinite;
+    }
+    @media screen and (max-width: 1420px) {
+      -webkit-animation: move1420px 16s linear infinite;
+      -moz-animation: move1420px 16s linear infinite;
+      -o-animation: move1420px 16s linear infinite;
+      animation: move1420px 16s linear infinite;
+    }
+    @media screen and (max-width: 1180px) {
+      -webkit-animation: move1180px 16s linear infinite;
+      -moz-animation: move1180px 16s linear infinite;
+      -o-animation: move1180px 16s linear infinite;
+      animation: move1180px 16s linear infinite;
+    }
+    @media screen and (max-width: 970px) {
+      -webkit-animation: move930px 16s linear infinite;
+      -moz-animation: move930px 16s linear infinite;
+      -o-animation: move930px 16s linear infinite;
+      animation: move930px 16s linear infinite;
+    }
+    @media screen and (max-width: 768px) {
+      -webkit-animation: move768px 16s linear infinite;
+      -moz-animation: move768px 16s linear infinite;
+      -o-animation: move768px 16s linear infinite;
+      animation: move768px 16s linear infinite;
+    }
+    @media screen and (max-width: 500px) {
+      -webkit-animation: move500px 16s linear infinite;
+      -moz-animation: move500px 16s linear infinite;
+      -o-animation: move500px 16s linear infinite;
+      animation: move500px 16s linear infinite;
+    }
+
+    &:nth-child(2) {
+      -webkit-animation: move2 14s linear infinite;
+      -moz-animation: move2 14s linear infinite;
+      -o-animation: move2 14s linear infinite;
+      animation: move2 14s linear infinite;
+      @media screen and (max-width: 1630px) {
+        -webkit-animation: move1600px2 14s linear infinite;
+        -moz-animation: move1600px2 14s linear infinite;
+        -o-animation: move1600px2 14s linear infinite;
+        animation: move1600px2 14s linear infinite;
+      }
+      @media screen and (max-width: 1420px) {
+        -webkit-animation: move1420px2 14s linear infinite;
+        -moz-animation: move1420px2 14s linear infinite;
+        -o-animation: move1420px2 14s linear infinite;
+        animation: move1420px2 14s linear infinite;
+      }
+      @media screen and (max-width: 1180px) {
+        -webkit-animation: move1180px2 14s linear infinite;
+        -moz-animation: move1180px2 14s linear infinite;
+        -o-animation: move1180px2 14s linear infinite;
+        animation: move1180px2 14s linear infinite;
+      }
+      @media screen and (max-width: 970px) {
+        -webkit-animation: move930px2 14s linear infinite;
+        -moz-animation: move930px2 14s linear infinite;
+        -o-animation: move930px2 14s linear infinite;
+        animation: move930px2 14s linear infinite;
+      }
+      @media screen and (max-width: 768px) {
+        -webkit-animation: move768px2 14s linear infinite;
+        -moz-animation: move768px2 14s linear infinite;
+        -o-animation: move768px2 14s linear infinite;
+        animation: move768px2 14s linear infinite;
+      }
+      @media screen and (max-width: 500px) {
+        -webkit-animation: move500px2 14s linear infinite;
+        -moz-animation: move500px2 14s linear infinite;
+        -o-animation: move500px2 14s linear infinite;
+        animation: move500px2 14s linear infinite;
+      }
+    }
+
+    &:nth-child(3) {
+      -webkit-animation: move 8s linear infinite;
+      -moz-animation: move 8s linear infinite;
+      -o-animation: move 8s linear infinite;
+      animation: move 8s linear infinite;
+      @media screen and (max-width: 1630px) {
+        -webkit-animation: move1600px 8s linear infinite;
+        -moz-animation: move1600px 8s linear infinite;
+        -o-animation: move1600px 8s linear infinite;
+        animation: move1600px 8s linear infinite;
+      }
+      @media screen and (max-width: 1420px) {
+        -webkit-animation: move1420px 8s linear infinite;
+        -moz-animation: move1420px 8s linear infinite;
+        -o-animation: move1420px 8s linear infinite;
+        animation: move1420px 8s linear infinite;
+      }
+      @media screen and (max-width: 1180px) {
+        -webkit-animation: move1180px 8s linear infinite;
+        -moz-animation: move1180px 8s linear infinite;
+        -o-animation: move1180px 8s linear infinite;
+        animation: move1180px 8s linear infinite;
+      }
+      @media screen and (max-width: 970px) {
+        -webkit-animation: move930px 8s linear infinite;
+        -moz-animation: move930px 8s linear infinite;
+        -o-animation: move930px 8s linear infinite;
+        animation: move930px 8s linear infinite;
+      }
+      @media screen and (max-width: 768px) {
+        -webkit-animation: move768px 8s linear infinite;
+        -moz-animation: move768px 8s linear infinite;
+        -o-animation: move768px 8s linear infinite;
+        animation: move768px 8s linear infinite;
+      }
+      @media screen and (max-width: 500px) {
+        -webkit-animation: move500px 8s linear infinite;
+        -moz-animation: move500px 8s linear infinite;
+        -o-animation: move500px 8s linear infinite;
+        animation: move500px 8s linear infinite;
+      }
+    }
+  }
+}

@@ -1,42 +1,400 @@
-@keyframes show {
-  0% {
-    transform: translateX(-100%);
+@keyframes move {
+  from {
+    transform: rotate(0deg) translateX(825px) rotate(0deg);
   }
-  100% {
-    transform: translateX(0);
+
+  to {
+    transform: rotate(360deg) translateX(825px) rotate(-360deg);
   }
 }
 
-//@keyframes show {
-//  0% {
-//    opacity: 0;
-//  }
-//  100% {
-//    opacity: 1;
-//  }
-//}
-//
-//
-//@keyframes load {
-//  0% {
-//    transform: rotate(0deg);
-//  }
-//  50% {
-//    transform: rotate(180deg);
-//  }
-//  100% {
-//    transform: rotate(360deg);
-//  }
-//}
-//
-//
-//@keyframes slide-down {
-//  0% {
-//    opacity: 0;
-//    transform: translate3d(0, -100px, 0);
-//  }
-//  100% {
-//    opacity: 1;
-//    transform: translate3d(0, 0, 0) ;
-//  }
-//}
+@-webkit-keyframes move {
+  from {
+    transform: rotate(0deg) translateX(825px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(825px) rotate(-360deg);
+  }
+}
+
+@keyframes move2 {
+  from {
+    transform: rotate(0deg) translateX(-825px)rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(-825px)rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes move2 {
+  from {
+    transform: rotate(0deg) translateX(-825px)rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(-825px)rotate(-360deg);
+  }
+}
+
+
+// анимация для 1600px
+@keyframes move1600px {
+  from {
+    transform: rotate(0deg) translateX(700px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(700px) rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes move1600px {
+  from {
+    transform: rotate(0deg) translateX(700px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(700px) rotate(-360deg);
+  }
+}
+
+@keyframes move1600px2 {
+  from {
+    transform: rotate(0deg) translateX(-700px)rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(-700px)rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes move1600px2 {
+  from {
+    transform: rotate(0deg) translateX(-700px)rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(-700px)rotate(-360deg);
+  }
+}
+
+
+// анимация для 1420px
+@keyframes move1420px {
+  from {
+    transform: rotate(0deg) translateX(575px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(575px) rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes move1420px {
+  from {
+    transform: rotate(0deg) translateX(575px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(575px) rotate(-360deg);
+  }
+}
+
+@keyframes move1420px2 {
+  from {
+    transform: rotate(0deg) translateX(-575px)rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(-575px)rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes move1420px2 {
+  from {
+    transform: rotate(0deg) translateX(-575px)rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(-575px)rotate(-360deg);
+  }
+}
+
+
+// анимация для 1180px
+@keyframes move1180px {
+  from {
+    transform: rotate(0deg) translateX(450px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(450px) rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes move1180px {
+  from {
+    transform: rotate(0deg) translateX(450px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(450px) rotate(-360deg);
+  }
+}
+
+@keyframes move1180px2 {
+  from {
+    transform: rotate(0deg) translateX(-450px)rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(-450px)rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes move1180px2 {
+  from {
+    transform: rotate(0deg) translateX(-450px)rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(-450px)rotate(-360deg);
+  }
+}
+
+
+// анимация для 930px
+@keyframes move930px {
+  from {
+    transform: rotate(0deg) translateX(375px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(375px) rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes move930px {
+  from {
+    transform: rotate(0deg) translateX(375px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(375px) rotate(-360deg);
+  }
+}
+
+@keyframes move930px2 {
+  from {
+    transform: rotate(0deg) translateX(-375px)rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(-375px)rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes move930px2 {
+  from {
+    transform: rotate(0deg) translateX(-375px)rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(-375px)rotate(-360deg);
+  }
+}
+
+
+// анимация для 768px
+@keyframes move768px {
+  from {
+    transform: rotate(0deg) translateX(350px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(350px) rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes move768px {
+  from {
+    transform: rotate(0deg) translateX(350px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(350px) rotate(-360deg);
+  }
+}
+
+@keyframes move768px2 {
+  from {
+    transform: rotate(0deg) translateX(-350px)rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(-350px)rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes move768px2 {
+  from {
+    transform: rotate(0deg) translateX(-350px)rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(-350px)rotate(-360deg);
+  }
+}
+
+
+// анимация для 500px
+@keyframes move500px {
+  from {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes move500px {
+  from {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+@keyframes move500px2 {
+  from {
+    transform: rotate(0deg) translateX(-150px)rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(-150px)rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes move500px2 {
+  from {
+    transform: rotate(0deg) translateX(-150px)rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(-150px)rotate(-360deg);
+  }
+}
+
+
+// загрузка ....
+@keyframes dot1 {
+  0% {
+    transform: translate3d(15px, 0, 0) scale(0.9);
+  }
+  50%{
+    transform: translate3d(64px, 0, 0) scale(0.9);
+  }
+
+  100% {
+    transform: translate3d(15px, 0, 0) scale(0.9);
+  }
+}
+
+@keyframes dotanother {
+  0% {
+    transform: scale(1.2);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes dotanother2 {
+  0% {
+    transform: scale(1);
+  }
+
+  20%{
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  30% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1);
+  }
+  82% {
+    transform: scale(1.2);
+  }
+  95% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes dotanother3 {
+  0% {
+    transform: scale(1);
+  }
+
+  20%{
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  30% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1);
+  }
+  82% {
+    transform: scale(1.2);
+  }
+  95% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes dotanother4 {
+  0% {
+    transform: scale(1.2);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}

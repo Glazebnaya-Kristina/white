@@ -58,7 +58,8 @@ module.exports = function (grunt) {
                'markup/js/new-inner.min.js': ['assets/dist/js/new-inner.js'],
                'markup/js/projects.min.js': ['assets/dist/js/projects.js'],
                'markup/js/business-practice.min.js': ['assets/dist/js/business-practice.js'],
-               'markup/js/contacts.min.js': ['assets/dist/js/contacts.js']
+               'markup/js/contacts.min.js': ['assets/dist/js/contacts.js'],
+               'markup/js/404.min.js': ['assets/dist/js/404.js']
             }
          }
       },
