@@ -13,14 +13,28 @@
 
 
 .game-trainings {
+  background-image: url('../img/lines3.png');
+  background-position: top right 68px;
+  background-size: 39% 100%;
 
+  @media (min-width: $screen-md) {
+    background-repeat: no-repeat;
+    background-position: top right 146px;
+    background-size: 18.5% 100%;
+  }
   &__header {
     z-index: 3;
+    @media (min-width: $screen-xl) {
+      z-index: auto;
+    }
   }
 
   .logo {
     @media (min-width: $screen-md) {
       background-color: $color-grey-lightest;
+    }
+    @media (min-width: $screen-xl) {
+      background-color: transparent;
     }
 
     &__img {
@@ -68,6 +82,10 @@
       padding-top: 150px;
       padding-right: 100px;
       background-color: $color-grey-lightest;
+      background-image: url('../img/game-trainings/aside-line.jpg');
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: auto 100%;
     }
     @media (min-width: $screen-xl) {
       transform: none;
@@ -75,6 +93,8 @@
       width: 100%;
       padding-right: 20px;
       padding-top: 162px;
+      background-position: left top;
+      background-size: 100% auto;
     }
 
     &--active{

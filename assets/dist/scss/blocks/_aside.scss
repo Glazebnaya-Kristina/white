@@ -1,6 +1,7 @@
 .aside{
   $block-name: &; // #{$block-name}__element
 
+  position: relative;
   height: 46px;
   margin: 0 -15px;
   background-color: $color-grey-lightest;
@@ -15,6 +16,10 @@
     margin: 0;
     padding-top: 150px;
     padding-right: 100px;
+    background-image: url('../img/game-trainings/aside-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto 100%;
   }
   @media (min-width: $screen-xl) {
     transform: none;
@@ -22,6 +27,8 @@
     width: 100%;
     padding-right: 20px;
     padding-top: 162px;
+    background-position: left top;
+    background-size: 100% auto;
   }
 
 
