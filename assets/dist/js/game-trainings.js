@@ -45,7 +45,7 @@ $(document).ready(function () {
       var href = $(this).attr('href');
       if(hash==href.substr(0,href.length-5)){
          var toLoad = hash+'.html #content';
-         $('#content').load(toLoad)
+         $('#content').load(toLoad);
       }
    });
 
@@ -54,6 +54,12 @@ $(document).ready(function () {
       var toLoad = $(this).attr('href')+' #content';
       $('#content').fadeOut('fast').hide(loadContent);
       window.location.hash = $(this).attr('href').substr(0,$(this).attr('href').length-5);
+
+      if (toLoad && jQuery(window).width() < 767){
+         $(this).parents().find('.aside').css({'display':'none'});
+         $(this).parents().find('.game-trainings__main').addClass('game-trainings__main--page-inner')
+      }
+
       function loadContent() {
          $('#content').load(toLoad,'',showNewContent());
       }

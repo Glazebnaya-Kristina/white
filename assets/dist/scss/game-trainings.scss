@@ -8,8 +8,10 @@
 @import "blocks/navigation-aside";
 @import "blocks/aside";
 @import "blocks/tabs";
+@import "blocks/characteristic";
 // поключения секций
 @import "sections/game-trainings/content-info";
+@import "sections/page-inner/inner-content";
 
 
 .game-trainings {
@@ -69,6 +71,10 @@
     }
     @media (min-width: $screen-xl) {
       padding-left: 460px;
+    }
+
+    &--page-inner{
+      margin-top: 41px;
     }
   }
 

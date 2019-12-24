@@ -1,0 +1,35 @@
+.characteristic{
+  @include ul-reset;
+  display: flex;
+
+  li {
+    display: flex;
+    align-items: center;
+    color: $color-blue;
+    font-size: 16px;
+    font-family: $font-family-Din-pro-cond;
+    letter-spacing: 0.1rem;
+    font-weight: 900;
+
+    &:last-child {
+      margin-left: 41px;
+    }
+  }
+
+  i {
+    margin-right: 9px;
+    font-size: 18px;
+  }
+
+  button{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  button,
+  span{
+    //line-height: 19px;
+    border-bottom: 1px solid $color-blue;
+  }
+}

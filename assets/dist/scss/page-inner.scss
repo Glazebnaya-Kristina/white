@@ -1,4 +1,3 @@
-//game-trainings
 // стили шаблонов
 @import "templates/header";
 @import "templates/footer";
@@ -8,8 +7,10 @@
 @import "blocks/navigation-aside";
 @import "blocks/aside";
 @import "blocks/tabs";
+@import "blocks/characteristic";
 // поключения секций
 @import "sections/game-trainings/content-info";
+@import "sections/page-inner/inner-content";
 
 
 .game-trainings {

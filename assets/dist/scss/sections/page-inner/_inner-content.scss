@@ -1,0 +1,168 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.inner-content {
+  $block-name: &; // #{$block-name}__element
+
+  padding-bottom: 92px;
+  &__header-top{
+
+    h1{
+      @media (max-width: 767px) {
+        line-height: 45px;
+      }
+    }
+    a{
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      font-family: $font-family-Din-pro-cond;
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: 0.26rem;
+      color: $color-violet-lightest;
+      //@media (min-width: $screen-xl) {
+      //  font-size: 47.5px;
+      //}
+    }
+
+    i{
+      margin-right: 15px;
+      &:before{
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__characteristic {
+    flex-direction: column;
+
+    li{
+      line-height: 17px;
+      &:last-child{
+        margin: 0;
+      }
+      &:not(:first-child){
+        margin-top: 19px;
+      }
+    }
+    i{
+      font-size: 15px;
+    }
+  }
+
+  &__header-bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 37px;
+  }
+
+  &__body{
+    h2{
+      margin: 0;
+      margin-top: 34px;
+      text-transform: uppercase;
+      font-family: $font-family-Din-pro-cond;
+      font-weight: 900;
+      font-size: 22px;
+      color: $color-orange;
+      letter-spacing: 0.25rem;
+      @media (min-width: $screen-xl) {
+        letter-spacing: 0.35rem;
+      }
+
+      + P{
+        margin-top: 20px;
+      }
+    }
+    p{
+      font-weight: 300;
+      line-height: 30px;
+    }
+
+    ul{
+      @include ul-reset;
+      margin-top: 15px;
+    }
+
+    li{
+      position: relative;
+      padding-left: 1.1em;
+      line-height: 26px;
+      @media (min-width: $screen-xl) {
+        padding-left: 1.9em;
+        line-height: 24px;
+      }
+
+      &:after {
+        @include pseudo;
+        top: 8px;
+        left: 0;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #ebebeb;
+        @media (min-width: $screen-xl) {
+          left: 0;
+          width: 10px;
+          height: 10px;
+        }
+      }
+
+      &:not(:first-child) {
+        margin-top: 9px;
+      }
+    }
+  }
+
+  &__wrapper-gallery{
+    ul{
+      margin: 0 -15px;
+      margin-top: 20px;
+      @media (min-width: $screen-md) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    }
+
+    li{
+      height: 208px;
+      padding: 0;
+      @media (min-width: $screen-md) {
+        flex-basis: 48%;
+        margin-bottom: 35px;
+      }
+
+      &:after{
+        display: none;
+      }
+
+      &:not(:first-child) {
+        margin-top: 17px;
+      }
+
+      a{
+        width: 100%;
+        height: inherit;
+      }
+      img{
+        @include mask;
+        @include img;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 85px;
+
+    button{
+      &:not(:first-child){
+        margin-top: 35px;
+      }
+    }
+  }
+}
