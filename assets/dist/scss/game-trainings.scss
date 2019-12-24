@@ -1,0 +1,90 @@
+//game-trainings
+// стили шаблонов
+@import "templates/header";
+@import "templates/footer";
+// Подключения библиотек
+//@import "libs/jcf-checkbox";
+// Подключения блоков
+@import "blocks/navigation-aside";
+@import "blocks/aside";
+@import "blocks/tabs";
+// поключения секций
+@import "sections/game-trainings/content-info";
+
+
+.game-trainings {
+
+  &__header {
+    z-index: 3;
+  }
+
+  .logo {
+    @media (min-width: $screen-md) {
+      background-color: $color-grey-lightest;
+    }
+
+    &__img {
+      width: 73px;
+      height: 88px;
+    }
+  }
+
+  &__title {
+    text-align: right;
+    @media (max-width: 767px) {
+      font-size: 34px;
+      letter-spacing: 0.24rem;
+    }
+  }
+
+  &__main {
+    @include container;
+    margin-top: 66px;
+    @media (min-width: $screen-md) {
+      padding-left: 135px;
+    }
+    @media (min-width: $screen-lg) {
+      padding-left: 200px;
+    }
+    @media (min-width: $screen-xl) {
+      padding-left: 460px;
+    }
+  }
+
+  &__tabs {
+    margin-top: 27px;
+  }
+
+  &__background {
+    @media (min-width: $screen-md) {
+      height: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      transform: translateX(-76.5%);
+      max-width: 438px;
+      width: 100%;
+      padding-top: 150px;
+      padding-right: 100px;
+      background-color: $color-grey-lightest;
+    }
+    @media (min-width: $screen-xl) {
+      transform: none;
+      max-width: 32.4%;
+      width: 100%;
+      padding-right: 20px;
+      padding-top: 162px;
+    }
+
+    &--active{
+      transform: translateX(0);
+    }
+  }
+
+}
+
+.footer {
+  z-index: 1;
+  position: relative;
+}

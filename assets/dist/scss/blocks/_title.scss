@@ -41,6 +41,9 @@
   &--white{
     color: $white;
   }
+  &--violet{
+    color: $color-violet-lightest;
+  }
 
   &--hidden{
     @include hide-text;

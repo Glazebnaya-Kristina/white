@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="cmsmagazine" content="5a7189a28fb3dc68238dbdb44c9ea99c" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <!--  Edge и ряд мобильных браузеров слишком умны. Отключим это.-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="date=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="google" content="notranslate">
+    <title>404 | Over the top</title>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="../css/style.css" data-inprogress="">
+    <link type="text/css" rel="stylesheet" href="../css/404.css" data-inprogress="">
+</head>
+
+<body>
+
+    <main class="page__main">
+
+        <section class="content-404">
+            <div class="content-404__inner">
+                <p class="content-404__wrapper-img">
+                    <img class="content-404__logo" src="../img/logo-404.png" alt="Логотип Over The Top">
+                </p>
+                <div class="content-404__wrapper">
+                    <p class="content-404__text">Oops <span>...</span></p>
+                    <h1 class="content-404__title">404</h1>
+                    <h2 class="content-404__subtitle">Мы работаем над решением проблемы</h2>
+                    <a href="index.html" class="button button--bgc button--big-size content-404__button">на главную<i
+                class="icon-arrow-long"></i></a>
+                </div>
+                <p class="ring">
+                    <span class="ring__point"></span>
+                    <span class="ring__point"></span>
+                    <span class="ring__point"></span>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+
+    <section class="modal">
+        <!-- Модальное окно РЕГЕСТРИЦИЯ -->
+        <div class="popup popup--big modal__registration" data-modal="registration">
+            <div class="modal__dialog">
+                <div class="modal__header modal__header--line">
+                    <h3 class="modal__title">Регистрация</h3>
+                    <button class="modal__close close close--grey-dark close--icon" type="button">
+          <span class="close__description">Закрыть модальное окно</span>
+          <i class="icon-error"></i>
+        </button>
+                </div>
+                <div class="modal__content">
+                    <form action="#" class="form">
+                        <div class="form__wrapper form__wrapper--column-2">
+                            <label class="label">
+              <span class="label__name">Имя</span>
+              <input type="text" class="input" placeholder="Имя">
+            </label>
+                            <label class="label">
+              <span class="label__name">Фамилия</span>
+              <input type="text" class="input" placeholder="Фамилия">
+            </label>
+                            <label class="label">
+              <span class="label__name">E-mail</span>
+              <input type="email" class="input" placeholder="E-mail">
+            </label>
+                            <label class="label">
+              <span class="label__name">Телефон</span>
+              <input type="tel" class="input" placeholder="Телефон">
+            </label>
+                            <label class="label">
+              <span class="label__name">Пароль</span>
+              <input id="password" type="password" name="password" class="input" placeholder="Пароль">
+            </label>
+                            <label class="label">
+              <span class="label__name">Повторите пароль</span>
+              <input type="password" name="confirm_password" class="input" placeholder="Повторите пароль">
+            </label>
+                        </div>
+                        <span class="text-error">Ошибка...</span>
+                        <button type="submit" class="button button--blue button--xs-s modal__registration-button js-open-modal" data-modal="thanks-registration">
+            Зарегистрироваться
+          </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Модальное окно Спасибо за РЕГЕСТРИЦИЮ -->
+        <div class="popup popup--small modal__thanks-registration" data-modal="thanks-registration">
+            <div class="modal__dialog">
+                <div class="modal__header modal__header--center">
+                    <h3 class="modal__title modal__title--element title title--element">Спасибо Вам за регистрацию</h3>
+                </div>
+                <div class="modal__content modal__content--center">
+                    <button class="button button--border-transparent button--modal js-open-modal" data-modal="sign-in" type="button">Закрыть
+        </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Модальное окно ВВОЙТИ -->
+        <div class="popup popup--big popup--hight modal__sign-in" data-modal="sign-in">
+            <div class="modal__dialog">
+                <div class="modal__header modal__header--line">
+                    <h3 class="modal__title">Вход</h3>
+                    <button class="modal__close close close--grey-dark close--icon" type="button">
+          <span class="close__description">Закрыть модальное окно</span>
+          <i class="icon-error"></i>
+        </button>
+                </div>
+                <div class="modal__content modal__content--center">
+                    <form action="#" class="form">
+                        <div class="form__wrapper form__wrapper--column-2">
+                            <p>
+                                <label class="label">
+                <span class="label__name">E-mail</span>
+                <input type="email" class="input" placeholder="E-mail">
+              </label>
+                                <button type="button" class="button link link--blue modal__sign-in-link js-open-modal" data-modal="registration">Регистрация
+              </button>
+                            </p>
+                            <p>
+                                <label class="label">
+                <span class="label__name">Пароль</span>
+                <input type="password" class="input" placeholder="Пароль">
+              </label>
+                                <button type="button" class="button link link--blue modal__sign-in-link js-open-modal" data-modal="password-reminder">Напомнить пароль
+              </button>
+                            </p>
+                        </div>
+                        <span class="text-error">Ошибка...</span>
+                        <a href="personal-area.html" class="button button--blue button--xs-s modal__sign-in-button">
+            Войти
+          </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Подложка под модальным окном -->
+        <div class="modal__overlay modal__overlay--opened js-overlay-modal"></div>
+    </section>
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/script.min.js"></script>
+    <script src="../js/404.min.js"></script>
+
+</body>
+
+</html>

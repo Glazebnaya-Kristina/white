@@ -1,0 +1,133 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+
+.content-info {
+  $block-name: &; // #{$block-name}__element
+
+  padding-top: 56px;
+  padding-bottom: 82px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 30px;
+    padding-bottom: 238px;
+  }
+
+  &__list{
+    @include ul-reset;
+
+    > li{
+      @media (min-width: $screen-xl) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      &:not(:first-child){
+        margin-top: 89px;
+        @media (min-width: $screen-xl) {
+          margin-top: 105px;
+        }
+      }
+      > a{
+        @media (min-width: $screen-xl) {
+          flex-basis: 100%;
+        }
+      }
+      h2 {
+        line-height: 30px;
+      }
+    }
+  }
+
+  &__info {
+    margin-top: 17px;
+    @media (min-width: $screen-xl) {
+      margin-top: 47px;
+      flex-basis: 45%;
+    }
+    a {
+      outline: none;
+    }
+
+    p {
+      font-weight: 300;
+      line-height: 30px;
+    }
+  }
+
+  &__characteristic {
+    @include ul-reset;
+    display: flex;
+    @media (min-width: $screen-xl) {
+      padding-left: 35px;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      color: $color-blue;
+      font-size: 16px;
+      font-family: $font-family-Din-pro-cond;
+      letter-spacing: 0.1rem;
+      font-weight: 900;
+
+      &:last-child {
+        margin-left: 41px;
+      }
+    }
+
+    i {
+      margin-right: 9px;
+      font-size: 18px;
+    }
+  }
+
+  &__list-theme {
+    @include ul-reset;
+    margin-top: 11px;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 40px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 1.1em;
+      line-height: 26px;
+      @media (min-width: $screen-xl) {
+        padding-left: 1.9em;
+        line-height: 24px;
+      }
+
+      &:after {
+        @include pseudo;
+        top: 8px;
+        left: 0;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #ebebeb;
+        @media (min-width: $screen-xl) {
+          left: 0;
+          width: 10px;
+          height: 10px;
+        }
+      }
+
+      &:not(:first-child) {
+        margin-top: 7px;
+        @media (min-width: $screen-xl) {
+          margin-top: 9px;
+        }
+      }
+    }
+  }
+
+  &__wrapper-list {
+    margin-top: 40px;
+    @media (min-width: $screen-xl) {
+      margin-top: 46px;
+      flex-basis: 47%;
+    }
+  }
+}

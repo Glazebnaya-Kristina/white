@@ -1,0 +1,114 @@
+.navigation-aside{
+  $block-name: &; // #{$block-name}__element
+
+  position: relative;
+  height: 46px;
+  padding: 8px 15px;
+  overflow: hidden;
+  background-color: $color-grey-lightest;
+  @media (min-width: $screen-md) {
+    overflow: visible;
+    max-width: 329px;
+    height: auto;
+    padding-right: 0;
+  }
+  @media (min-width: $screen-xl) {
+    margin-left: auto;
+    max-width: 373px;
+    padding-bottom: 346px;
+  }
+  &--active{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    padding-bottom: 37px;
+    @media (min-width: $screen-md) {
+      position: relative;
+    }
+  }
+  &__list{
+    @include ul-reset;
+    position: relative;
+    overflow: hidden;
+    @media (min-width: $screen-md) {
+      overflow: visible;
+    }
+    @media (min-width: $screen-xl) {
+      font-size: 20px;
+    }
+
+    &:before{
+      @include pseudo;
+      content: '\e812';
+      font-family: "fontello";
+      top: -22px;
+      right: -14px;
+      transform: rotate(90deg);
+      z-index: 1;
+      padding: 25px 14px;
+      font-size: 14px;
+      color: $color-blue;
+      @media (min-width: $screen-md) {
+        transform: none;
+        right: -80px;
+        padding: 25px;
+      }
+      @media (min-width: $screen-xl) {
+        display: none;
+      }
+    }
+  }
+
+  li{
+    position: relative;
+    padding: 0 35px;
+    font-weight: 300;
+    transition: $transition-time;
+    @media (min-width: $screen-md) {
+      padding-right: 0;
+    }
+    @media (min-width: $screen-xl) {
+      line-height: 28px;
+    }
+    &:not(:first-child){
+      margin-top: 10px;
+      @media (min-width: $screen-md) {
+        margin-top: 30px;
+      }
+      @media (min-width: $screen-xl) {
+        margin-top: 37px;
+      }
+      @media (max-height: 720px) {
+        margin-top: 25px;
+      }
+    }
+
+    &:nth-child(2){
+      margin-top: 25px;
+      @media (min-width: $screen-md) {
+        margin-top: 30px;
+      }
+      @media (min-width: $screen-xl) {
+        margin-top: 36px;
+      }
+      @media (max-height: 720px) {
+        margin-top: 25px;
+      }
+    }
+  }
+
+  .tabs-active{
+    color: $color-blue;
+    font-weight: 500;
+    &:after{
+      @include pseudo;
+      left: 0;
+      top: 13px;
+      width: 22px;
+      height: 3px;
+      background-color: $color-blue;
+      transition: $transition-time;
+    }
+  }
+}

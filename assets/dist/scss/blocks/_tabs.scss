@@ -1,0 +1,14 @@
+.tabs {
+  &__content {
+    display: none;
+  }
+  &__content.tabs-active {
+    display: block;
+  }
+  
+  &__caption{
+    li{
+      cursor: pointer;
+    }
+  }
+}
