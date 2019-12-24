@@ -44,17 +44,24 @@
   }
 
   &__title {
+    position: absolute;
+    top: -126px;
+    right: 0;
     text-align: right;
     @media (max-width: 767px) {
       font-size: 34px;
       letter-spacing: 0.24rem;
     }
+    @media (min-width: $screen-md) {
+      top: -99px;
+    }
   }
 
   &__main {
     @include container;
-    margin-top: 66px;
+    margin-top: 144px;
     @media (min-width: $screen-md) {
+      margin-top: 165px;
       padding-left: 135px;
     }
     @media (min-width: $screen-lg) {

@@ -5,12 +5,13 @@
 .content-info {
   $block-name: &; // #{$block-name}__element
 
+  position: relative;
   padding-top: 56px;
-  padding-bottom: 82px;
+  padding-bottom: 96px;
 
   @media (min-width: $screen-xl) {
     padding-top: 30px;
-    padding-bottom: 238px;
+    padding-bottom: 263px;
   }
 
   &__list{
@@ -23,9 +24,9 @@
         justify-content: space-between;
       }
       &:not(:first-child){
-        margin-top: 89px;
+        margin-top: 63px;
         @media (min-width: $screen-xl) {
-          margin-top: 105px;
+          margin-top: 81px;
         }
       }
       > a{
@@ -115,16 +116,13 @@
       }
 
       &:not(:first-child) {
-        margin-top: 7px;
-        @media (min-width: $screen-xl) {
-          margin-top: 9px;
-        }
+        margin-top: 9px;
       }
     }
   }
 
   &__wrapper-list {
-    margin-top: 40px;
+    margin-top: 46px;
     @media (min-width: $screen-xl) {
       margin-top: 46px;
       flex-basis: 47%;
