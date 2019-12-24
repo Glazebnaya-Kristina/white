@@ -2,6 +2,7 @@
   $block-name: &; // #{$block-name}__element
 
   position: relative;
+  z-index: 1;
   height: 46px;
   margin: 0 -15px;
   background-color: $color-grey-lightest;

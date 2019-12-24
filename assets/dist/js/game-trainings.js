@@ -38,4 +38,31 @@ $(document).ready(function () {
       $(this).parent().find('.game-trainings__background').removeClass('game-trainings__background--active');
    });
 
+
+   // Check for hash value in URL
+   var hash = window.location.hash.substr(1);
+   var href = $('.content-info__link').each(function(){
+      var href = $(this).attr('href');
+      if(hash==href.substr(0,href.length-5)){
+         var toLoad = hash+'.html #content';
+         $('#content').load(toLoad)
+      }
+   });
+
+   $('.content-info__link').click(function(){
+
+      var toLoad = $(this).attr('href')+' #content';
+      $('#content').fadeOut('fast').hide(loadContent);
+      window.location.hash = $(this).attr('href').substr(0,$(this).attr('href').length-5);
+      function loadContent() {
+         $('#content').load(toLoad,'',showNewContent());
+      }
+      function showNewContent() {
+         $('#content').fadeIn('fast');
+      }
+
+      return false;
+
+   });
+
 });
