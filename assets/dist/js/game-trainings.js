@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-
    // табы
    $('ul.tabs__caption').each(function (i) {
       var storage = localStorage.getItem('tab' + i);
@@ -33,7 +32,7 @@ $(document).ready(function () {
    });
 
 
-   $('.content-info').on('click', function () {
+   $('.game-trainings__content').on('click', function () {
       $(this).parent().find('.aside').removeClass('aside--active');
       $(this).parent().find('.game-trainings__background').removeClass('game-trainings__background--active');
    });
@@ -58,17 +57,16 @@ $(document).ready(function () {
       if (toLoad && jQuery(window).width() < 767){
          $(this).parents().find('.aside').css({'display':'none'});
          $(this).parents().find('.game-trainings__main').addClass('game-trainings__main--page-inner')
+      } else if(toLoad && jQuery(window).width() > 767){
+         $(this).parents().find('.game-trainings__main').addClass('game-trainings__main--page-inner')
       }
 
       function loadContent() {
          $('#content').load(toLoad,'',showNewContent());
       }
       function showNewContent() {
-         $('#content').fadeIn('fast');
+         $('#content').fadeIn('slow').show();
       }
-
       return false;
-
    });
-
 });

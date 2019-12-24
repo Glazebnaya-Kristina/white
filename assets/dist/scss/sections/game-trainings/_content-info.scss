@@ -8,15 +8,18 @@
   position: relative;
   padding-top: 56px;
   padding-bottom: 96px;
-
+  @media (min-width: $screen-md) {
+    padding-top: 0;
+  }
   @media (min-width: $screen-xl) {
-    padding-top: 30px;
     padding-bottom: 263px;
   }
 
   &__list{
     @include ul-reset;
-
+    @media (min-width: $screen-md) {
+      margin-top: 55px;
+    }
     > li{
       @media (min-width: $screen-xl) {
         display: flex;

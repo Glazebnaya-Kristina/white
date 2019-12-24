@@ -25,11 +25,11 @@
     border: none;
     background-color: transparent;
     padding: 0;
+    cursor: pointer;
   }
 
   button,
   span{
-    //line-height: 19px;
     border-bottom: 1px solid $color-blue;
   }
 }

@@ -78,5 +78,16 @@
     line-height: 19px;
     letter-spacing: 0.25rem;
     border-bottom: 1px solid $color-orange;
+    @media (min-width: $screen-xl) {
+      font-size: 24px;
+      letter-spacing: 0.3rem;
+      line-height: 25px;
+    }
+
+    &:hover,
+    &:focus{
+      outline: none;
+      border-bottom: 1px solid transparent;
+    }
   }
 }

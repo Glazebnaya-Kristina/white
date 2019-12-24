@@ -24,6 +24,20 @@
     background-position: top right 146px;
     background-size: 18.5% 100%;
   }
+
+  &:after{
+    @include pseudo;
+    top: 64%;
+    right: -4px;
+    display: none;
+    width: 200px;
+    height: 480px;
+    background-image: url('../img/game-trainings/oval.png');
+    background-repeat: no-repeat;
+    @media (min-width: $screen-xl) {
+      display: block;
+    }
+  }
   &__header {
     z-index: 3;
     @media (min-width: $screen-xl) {
@@ -57,13 +71,29 @@
     @media (min-width: $screen-md) {
       top: -99px;
     }
+
+    &--mob{
+      @media (min-width: $screen-md) {
+        display: none;
+      }
+    }
+
+    &--desc{
+      display: none;
+      @media (min-width: $screen-md) {
+        display: block;
+        position: relative;
+        top: 0;
+      }
+    }
   }
 
   &__main {
     @include container;
     margin-top: 144px;
     @media (min-width: $screen-md) {
-      margin-top: 165px;
+      //margin-top: 165px;
+      margin-top: 67px;
       padding-left: 135px;
     }
     @media (min-width: $screen-lg) {
@@ -75,6 +105,10 @@
 
     &--page-inner{
       margin-top: 41px;
+      @media (min-width: $screen-md) {
+        //margin-top: 63px;
+        margin-top: 67px;
+      }
     }
   }
 
