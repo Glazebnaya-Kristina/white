@@ -896,10 +896,10 @@
     </main>
 
 
-    <section class="modal modal--opened">
+    <section class="modal">
 
         <!-- Модальное окно Задать вопрос -->
-        <div class="popup popup--opened ask-question" data-modal="ask-question">
+        <div class="popup ask-question" data-modal="ask-question">
             <div class="modal__header">
                 <h2 class="modal__title">Задать вопрос</h2>
                 <button class="modal__close close close--icon close--modal" type="button">
@@ -908,7 +908,6 @@
       </button>
             </div>
             <div class="modal__content modal__content--big jcf-scrollable">
-                <!-- Секция Свяжитесь с нами -->
                 <div class="feedback ask-question__feedback">
                     <form action="#" class="form feedback__form">
                         <ul class="feedback__list">
@@ -955,15 +954,13 @@
                     </form>
                 </div>
             </div>
-            <!--    </div>-->
         </div>
-
 
         <!-- Модальное окно Политика конфиденциальности  -->
         <div class="popup privacy-policy" data-modal="privacy-policy">
             <div class="modal__header">
                 <h2 class="modal__title">Политика конфиденциальности</h2>
-                <button class="modal__close close close--icon close--modal" type="button">
+                <button class="modal__close close close--icon close--modal close--policy" type="button">
         <span class="close__description">Закрыть модальное окно</span>
         <i class="icon-close"></i>
       </button>

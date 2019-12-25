@@ -41,19 +41,16 @@ $(document).ready(function () {
       }
    });
 
-});
 
-!function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),n=0;o[n]&&o[n]!==t;)++n;return Boolean(o[n])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype);
 
-// модальные окна
-document.addEventListener('DOMContentLoaded', function() {
 
    /* Записываем в переменные массив элементов-кнопок и подложку.
       Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
    var modalButtons = document.querySelectorAll('.js-open-modal'),
       overlay      = document.querySelector('.js-overlay-modal'),
       closeButtons = document.querySelectorAll('.close');
-      modalWrapp = document.querySelector('.modal');
+   modalWrapp = document.querySelector('.modal');
+   body = document.querySelector('body');
 
 
    /* Перебираем массив кнопок */
@@ -78,21 +75,39 @@ document.addEventListener('DOMContentLoaded', function() {
          modalElem.classList.add('popup--opened');
          overlay.classList.add('modal__overlay--opened');
          modalWrapp.classList.add('modal--opened');
-         document.querySelector('body').classList.add('hidden');
+         body.classList.add('hidden');
          jcf.replaceAll();
       }); // end click
 
    }); // end foreach
 
+
+   // // закрытие модального окна с
+   // var btnThanksRegistration = document.querySelector('button[data-modal="thanks-registration"]');
+   //
+   // btnThanksRegistration.addEventListener('click', function (e) {
+   //    e.preventDefault();
+   //    var modalRegistration = document.querySelector('.popup[data-modal="registration"]');
+   //    modalRegistration.classList.remove('popup--opened');
+   // });
+
+
    closeButtons.forEach(function(item){
 
       item.addEventListener('click', function(e) {
-         var parentModal = this.closest('.popup');
+         // var closePolicy = document.querySelector('.close--policy');
 
-         parentModal.classList.remove('popup--opened');
-         overlay.classList.remove('modal__overlay--opened');
-         modalWrapp.classList.remove('modal--opened');
-         document.querySelector('.hidden').classList.remove('hidden');
+         if (this.classList.contains('close--policy')){
+            var parentModal2 = this.closest('.popup');
+            parentModal2.classList.remove('popup--opened');
+         } else{
+            var parentModal = this.closest('.popup');
+            parentModal.classList.remove('popup--opened');
+            overlay.classList.remove('modal__overlay--opened');
+            modalWrapp.classList.remove('modal--opened');
+            body.classList.remove('hidden');
+         }
+
       });
 
    }); // end foreach
@@ -105,16 +120,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
          document.querySelector('.modal--opened').classList.remove('modal--opened');
          document.querySelector('.modal__overlay--opened').classList.remove('modal__overlay--opened');
-         document.querySelector('.popup--opened').classList.remove('popup--opened');
-         document.querySelector('.hidden').classList.remove('hidden');
-      };
+         // document.querySelector('.popup--opened').classList.remove('popup--opened');
+         var modalMeny = document.querySelectorAll('.popup--opened');
+         modalMeny.forEach(function (item) {
+            item.classList.remove('popup--opened');
+         });
+         body.classList.remove('hidden');
+      }
    }, false);
 
 
    overlay.addEventListener('click', function() {
       document.querySelector('.modal--opened').classList.remove('modal--opened');
-      document.querySelector('.popup--opened').classList.remove('popup--opened');
-      document.querySelector('.hidden').classList.remove('hidden');
+      // document.querySelector('.popup--opened').classList.remove('popup--opened');
+      var modalMeny = document.querySelectorAll('.popup--opened');
+      modalMeny.forEach(function (item) {
+         item.classList.remove('popup--opened');
+      });
+      body.classList.remove('hidden');
       this.classList.remove('.modal__overlay--opened');
    });
 }); // end ready
+//    document.addEventListener('DOMContentLoaded', function() {
+//
+//
+// });
+
+!function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),n=0;o[n]&&o[n]!==t;)++n;return Boolean(o[n])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype);
+
+// модальные окна
+
