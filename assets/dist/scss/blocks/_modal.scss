@@ -7,24 +7,18 @@
   //overflow: hidden;
   width: 100%;
   height: 540px;
-  //padding: 25px 30px;
   padding: 37px 15px 50px;
-  //padding-bottom: 26px;
   padding-bottom: 30px;
   background-color: $white;
-  //border: 1px solid $color-gold;
   @media (min-width: $screen-md) {
-    padding: 11px 30px;
-    padding-bottom: 30px;
+    width: 768px;
     height: auto;
+    padding: 97px 52px;
+    padding-bottom: 85px;
   }
-
-  //&--hight {
-  //  .modal__content {
-  //    height: 500px;
-  //    width: auto !important;
-  //  }
-  //}
+  @media (min-width: $screen-xl) {
+    width: 1140px;
+  }
 
   &--opened {
     display: block;
@@ -68,13 +62,7 @@
     }
   }
 
-  //&__header {
-  //  display: flex;
-  //  justify-content: space-between;
-  //  align-items: center;
-  //}
-
-  &__title{
+  &__title {
     margin: 0;
     text-transform: uppercase;
     font-family: $font-family-Din-pro-cond;
@@ -84,10 +72,10 @@
     color: $color-blue;
     text-align: center;
     line-height: 39px;
-  }
-
-  &__dialog {
-    //overflow-y: auto;
+    @media (min-width: $screen-xl) {
+      font-size: 48px;
+      letter-spacing: 0.21rem;
+    }
   }
 
   &__content {
@@ -96,12 +84,20 @@
     height: 360px;
     margin-top: 15px;
     padding-right: 8px;
-    //padding-right: 15px;
+    @media (min-width: $screen-xl) {
+      height: 520px;
+      margin-top: 46px;
+      padding-right: 60px;
+    }
   }
 
 
-  .privacy-policy{
-    h3{
+  .privacy-policy {
+    @media (min-width: $screen-xl) {
+      padding-left: 117px;
+    }
+
+    h3 {
       margin: 0;
       margin-bottom: 14px;
       text-transform: uppercase;
@@ -111,17 +107,29 @@
       color: $color-orange;
       letter-spacing: 0.14rem;
       @media (min-width: $screen-xl) {
-        //letter-spacing: 0.35rem;
+        margin-bottom: 16px;
+        letter-spacing: 0.25rem;
+        font-size: 24px;
       }
     }
-    p{
+
+    p {
       margin-bottom: 24px;
       font-size: 16px;
       font-weight: 300;
+      @media (min-width: $screen-xl) {
+        margin-bottom: 34px;
+        line-height: 28px;
+        font-size: 18px;
+      }
     }
-    ul{
+
+    ul {
       font-size: 16px;
       font-weight: 300;
+      @media (min-width: $screen-xl) {
+        font-size: 18px;
+      }
     }
   }
 }

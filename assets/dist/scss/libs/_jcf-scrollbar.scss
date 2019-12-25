@@ -3,6 +3,9 @@
   position: relative;
   padding-right: 15px;
   box-sizing: content-box;
+  @media (min-width: $screen-xl) {
+    padding-right: 0;
+  }
 }
 .jcf-scrollbar-vertical {
   position: absolute;
@@ -12,6 +15,10 @@
   width: 4px;
   cursor: default;
   background-color: $color-grey-lightest;
+  @media (min-width: $screen-xl) {
+    right: 48px;
+    width: 6px;
+  }
 }
 .jcf-scrollbar-vertical .jcf-scrollbar-dec,
 .jcf-scrollbar-vertical .jcf-scrollbar-inc {
@@ -33,6 +40,10 @@
   min-height: 23px;
   width: 4px;
   background-color: $color-blue;
+  @media (min-width: $screen-xl) {
+    width: 6px;
+    min-height: 52px;
+  }
 }
 
 .jcf-scrollbar.jcf-inactive .jcf-scrollbar-handle {
