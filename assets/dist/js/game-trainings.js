@@ -84,4 +84,12 @@ $(document).ready(function () {
 
       return false;
    });
+
+
+   // счетчик лишков
+   var number = "123456789";
+
+   $.each($("ol > li"), function(i) {
+      $(this).attr("mark", "0" + number[i] + " ");
+   });
 });

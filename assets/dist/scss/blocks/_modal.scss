@@ -1,8 +1,8 @@
 .popup {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  //left: 50%;
+  //top: 50%;
+  //transform: translate(-50%, -50%);
   z-index: 4;
   display: none;
   //overflow-x: hidden;
@@ -16,8 +16,9 @@
   @media (min-width: $screen-md) {
     width: 768px;
     height: auto;
-    padding: 97px 52px;
+    padding: 76px 97px;
     padding-bottom: 85px;
+    padding-left: 101px;
   }
   @media (min-width: $screen-xl) {
     width: 1140px;
@@ -148,6 +149,17 @@
 
   .ask-question {
 
+    .modal__content{
+      @media (min-width: $screen-xl) {
+        margin-top: -6px;
+        padding-right: 0;
+      }
+    }
+    .jcf-scrollable-wrapper{
+      @media (min-width: $screen-xl) {
+        height: auto !important;
+      }
+    }
     .jcf-scrollbar{
       @media (min-width: $screen-xl) {
         display: none;
@@ -177,6 +189,15 @@
 
     .feedback__list{
       order: 1;
+      @media (max-width: $screen-xl) {
+        margin-bottom: 41px;
+      }
+    }
+
+    .feedback__item{
+      @media (max-width: $screen-xl) {
+        flex-basis: 45%;
+      }
     }
 
     .feedback__consent{
@@ -188,11 +209,69 @@
 
     .feedback__button{
       order: 3;
-      margin-top: 35px;
+      margin-top: 34px;
     }
   }
 
   .input{
     width: auto;
+  }
+
+  .license-purchase{
+    @media (min-width: $screen-md) {
+      padding-left: 119px;
+    }
+    .modal__content{
+      @media (min-width: $screen-xl) {
+        height: auto !important;
+        margin-top: 31px;
+        padding-right: 0;
+      }
+    }
+    .jcf-scrollable-wrapper{
+      @media (min-width: $screen-xl) {
+        height: auto !important;
+      }
+    }
+    .jcf-scrollbar{
+      @media (min-width: $screen-xl) {
+        display: none;
+      }
+    }
+    h3 {
+      margin: 0;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      font-family: $font-family-Din-pro-cond;
+      font-weight: 900;
+      font-size: 22px;
+      color: $color-orange;
+      letter-spacing: 0.14rem;
+      @media (min-width: $screen-xl) {
+        margin-bottom: 16px;
+        letter-spacing: 0.25rem;
+        font-size: 24px;
+      }
+    }
+    p{
+      margin-bottom: 24px;
+      font-weight: 300;
+      font-size: 16px;
+      @media (min-width: $screen-xl) {
+        margin-bottom: 42px;
+        line-height: 28px;
+        font-size: 18px;
+      }
+    }
+    ul,
+    ol{
+      margin-bottom: 24px;
+      font-size: 16px;
+      font-weight: 300;
+      @media (min-width: $screen-xl) {
+        margin-bottom: 34px;
+        font-size: 18px;
+      }
+    }
   }
 }
