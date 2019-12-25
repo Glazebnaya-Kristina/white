@@ -94,109 +94,113 @@
     </main>
 
 
-    <section class="modal">
-        <!-- Модальное окно РЕГЕСТРИЦИЯ -->
-        <div class="popup popup--big modal__registration" data-modal="registration">
-            <div class="modal__dialog">
-                <div class="modal__header modal__header--line">
-                    <h3 class="modal__title">Регистрация</h3>
-                    <button class="modal__close close close--grey-dark close--icon" type="button">
-          <span class="close__description">Закрыть модальное окно</span>
-          <i class="icon-error"></i>
-        </button>
-                </div>
-                <div class="modal__content">
-                    <form action="#" class="form">
-                        <div class="form__wrapper form__wrapper--column-2">
-                            <label class="label">
-              <span class="label__name">Имя</span>
-              <input type="text" class="input" placeholder="Имя">
-            </label>
-                            <label class="label">
-              <span class="label__name">Фамилия</span>
-              <input type="text" class="input" placeholder="Фамилия">
-            </label>
-                            <label class="label">
-              <span class="label__name">E-mail</span>
-              <input type="email" class="input" placeholder="E-mail">
-            </label>
-                            <label class="label">
-              <span class="label__name">Телефон</span>
-              <input type="tel" class="input" placeholder="Телефон">
-            </label>
-                            <label class="label">
-              <span class="label__name">Пароль</span>
-              <input id="password" type="password" name="password" class="input" placeholder="Пароль">
-            </label>
-                            <label class="label">
-              <span class="label__name">Повторите пароль</span>
-              <input type="password" name="confirm_password" class="input" placeholder="Повторите пароль">
-            </label>
-                        </div>
-                        <span class="text-error">Ошибка...</span>
-                        <button type="submit" class="button button--blue button--xs-s modal__registration-button js-open-modal" data-modal="thanks-registration">
-            Зарегистрироваться
-          </button>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <!--<section class="modal">-->
+    <!--  &lt;!&ndash; Модальное окно РЕГЕСТРИЦИЯ &ndash;&gt;-->
+    <!--  <div class="popup popup&#45;&#45;big modal__registration" data-modal="registration">-->
+    <!--    <div class="modal__dialog">-->
+    <!--      <div class="modal__header modal__header&#45;&#45;line">-->
+    <!--        <h3 class="modal__title">Регистрация</h3>-->
+    <!--        <button class="modal__close close close&#45;&#45;grey-dark close&#45;&#45;icon" type="button">-->
+    <!--          <span class="close__description">Закрыть модальное окно</span>-->
+    <!--          <i class="icon-error"></i>-->
+    <!--        </button>-->
+    <!--      </div>-->
+    <!--      <div class="modal__content">-->
+    <!--        <form action="#" class="form">-->
+    <!--          <div class="form__wrapper form__wrapper&#45;&#45;column-2">-->
+    <!--            <label class="label">-->
+    <!--              <span class="label__name">Имя</span>-->
+    <!--              <input type="text" class="input" placeholder="Имя">-->
+    <!--            </label>-->
+    <!--            <label class="label">-->
+    <!--              <span class="label__name">Фамилия</span>-->
+    <!--              <input type="text" class="input" placeholder="Фамилия">-->
+    <!--            </label>-->
+    <!--            <label class="label">-->
+    <!--              <span class="label__name">E-mail</span>-->
+    <!--              <input type="email" class="input" placeholder="E-mail">-->
+    <!--            </label>-->
+    <!--            <label class="label">-->
+    <!--              <span class="label__name">Телефон</span>-->
+    <!--              <input type="tel" class="input" placeholder="Телефон">-->
+    <!--            </label>-->
+    <!--            <label class="label">-->
+    <!--              <span class="label__name">Пароль</span>-->
+    <!--              <input id="password" type="password" name="password" class="input" placeholder="Пароль">-->
+    <!--            </label>-->
+    <!--            <label class="label">-->
+    <!--              <span class="label__name">Повторите пароль</span>-->
+    <!--              <input type="password" name="confirm_password" class="input" placeholder="Повторите пароль">-->
+    <!--            </label>-->
+    <!--          </div>-->
+    <!--          <span class="text-error">Ошибка...</span>-->
+    <!--          <button type="submit" class="button button&#45;&#45;blue button&#45;&#45;xs-s modal__registration-button js-open-modal"-->
+    <!--                  data-modal="thanks-registration">-->
+    <!--            Зарегистрироваться-->
+    <!--          </button>-->
+    <!--        </form>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
 
-        <!-- Модальное окно Спасибо за РЕГЕСТРИЦИЮ -->
-        <div class="popup popup--small modal__thanks-registration" data-modal="thanks-registration">
-            <div class="modal__dialog">
-                <div class="modal__header modal__header--center">
-                    <h3 class="modal__title modal__title--element title title--element">Спасибо Вам за регистрацию</h3>
-                </div>
-                <div class="modal__content modal__content--center">
-                    <button class="button button--border-transparent button--modal js-open-modal" data-modal="sign-in" type="button">Закрыть
-        </button>
-                </div>
-            </div>
-        </div>
+    <!--  &lt;!&ndash; Модальное окно Спасибо за РЕГЕСТРИЦИЮ &ndash;&gt;-->
+    <!--  <div class="popup popup&#45;&#45;small modal__thanks-registration" data-modal="thanks-registration">-->
+    <!--    <div class="modal__dialog">-->
+    <!--      <div class="modal__header modal__header&#45;&#45;center">-->
+    <!--        <h3 class="modal__title modal__title&#45;&#45;element title title&#45;&#45;element">Спасибо Вам за регистрацию</h3>-->
+    <!--      </div>-->
+    <!--      <div class="modal__content modal__content&#45;&#45;center">-->
+    <!--        <button class="button button&#45;&#45;border-transparent button&#45;&#45;modal js-open-modal"-->
+    <!--                data-modal="sign-in" type="button">Закрыть-->
+    <!--        </button>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
 
-        <!-- Модальное окно ВВОЙТИ -->
-        <div class="popup popup--big popup--hight modal__sign-in" data-modal="sign-in">
-            <div class="modal__dialog">
-                <div class="modal__header modal__header--line">
-                    <h3 class="modal__title">Вход</h3>
-                    <button class="modal__close close close--grey-dark close--icon" type="button">
-          <span class="close__description">Закрыть модальное окно</span>
-          <i class="icon-error"></i>
-        </button>
-                </div>
-                <div class="modal__content modal__content--center">
-                    <form action="#" class="form">
-                        <div class="form__wrapper form__wrapper--column-2">
-                            <p>
-                                <label class="label">
-                <span class="label__name">E-mail</span>
-                <input type="email" class="input" placeholder="E-mail">
-              </label>
-                                <button type="button" class="button link link--blue modal__sign-in-link js-open-modal" data-modal="registration">Регистрация
-              </button>
-                            </p>
-                            <p>
-                                <label class="label">
-                <span class="label__name">Пароль</span>
-                <input type="password" class="input" placeholder="Пароль">
-              </label>
-                                <button type="button" class="button link link--blue modal__sign-in-link js-open-modal" data-modal="password-reminder">Напомнить пароль
-              </button>
-                            </p>
-                        </div>
-                        <span class="text-error">Ошибка...</span>
-                        <a href="personal-area.html" class="button button--blue button--xs-s modal__sign-in-button">
-            Войти
-          </a>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <!--  &lt;!&ndash; Модальное окно ВВОЙТИ &ndash;&gt;-->
+    <!--  <div class="popup popup&#45;&#45;big popup&#45;&#45;hight modal__sign-in" data-modal="sign-in">-->
+    <!--    <div class="modal__dialog">-->
+    <!--      <div class="modal__header modal__header&#45;&#45;line">-->
+    <!--        <h3 class="modal__title">Вход</h3>-->
+    <!--        <button class="modal__close close close&#45;&#45;grey-dark close&#45;&#45;icon" type="button">-->
+    <!--          <span class="close__description">Закрыть модальное окно</span>-->
+    <!--          <i class="icon-error"></i>-->
+    <!--        </button>-->
+    <!--      </div>-->
+    <!--      <div class="modal__content modal__content&#45;&#45;center">-->
+    <!--        <form action="#" class="form">-->
+    <!--          <div class="form__wrapper form__wrapper&#45;&#45;column-2">-->
+    <!--            <p>-->
+    <!--              <label class="label">-->
+    <!--                <span class="label__name">E-mail</span>-->
+    <!--                <input type="email" class="input" placeholder="E-mail">-->
+    <!--              </label>-->
+    <!--              <button type="button" class="button link link&#45;&#45;blue modal__sign-in-link js-open-modal"-->
+    <!--                      data-modal="registration">Регистрация-->
+    <!--              </button>-->
+    <!--            </p>-->
+    <!--            <p>-->
+    <!--              <label class="label">-->
+    <!--                <span class="label__name">Пароль</span>-->
+    <!--                <input type="password" class="input" placeholder="Пароль">-->
+    <!--              </label>-->
+    <!--              <button type="button" class="button link link&#45;&#45;blue modal__sign-in-link js-open-modal"-->
+    <!--                      data-modal="password-reminder">Напомнить пароль-->
+    <!--              </button>-->
+    <!--            </p>-->
+    <!--          </div>-->
+    <!--          <span class="text-error">Ошибка...</span>-->
+    <!--          <a href="personal-area.html" class="button button&#45;&#45;blue button&#45;&#45;xs-s modal__sign-in-button">-->
+    <!--            Войти-->
+    <!--          </a>-->
+    <!--        </form>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
 
-        <!-- Подложка под модальным окном -->
-        <div class="modal__overlay modal__overlay--opened js-overlay-modal"></div>
-    </section>
+    <!--  &lt;!&ndash; Подложка под модальным окном &ndash;&gt;-->
+    <!--  <div class="modal__overlay modal__overlay&#45;&#45;opened js-overlay-modal"></div>-->
+    <!--</section>-->
 
     <footer class="footer">
         <div class="footer__inner">

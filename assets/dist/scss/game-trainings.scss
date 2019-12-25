@@ -3,7 +3,8 @@
 @import "templates/header";
 @import "templates/footer";
 // Подключения библиотек
-//@import "libs/jcf-checkbox";
+@import "libs/jcf-scrollbar";
+@import "libs/jcf-checkbox";
 // Подключения блоков
 @import "blocks/navigation-aside";
 @import "blocks/aside";
@@ -12,6 +13,7 @@
 // поключения секций
 @import "sections/game-trainings/content-info";
 @import "sections/page-inner/inner-content";
+@import "sections/contacts/feedback";
 
 
 .game-trainings {

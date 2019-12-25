@@ -1,5 +1,11 @@
 $(document).ready(function () {
 
+   jcf.setOptions('Scrollable', {
+      alwaysPreventMouseWheel: true
+   });
+
+   jcf.replaceAll();
+
    // табы
    $('ul.tabs__caption').each(function (i) {
       var storage = localStorage.getItem('tab' + i);
@@ -17,6 +23,13 @@ $(document).ready(function () {
       localStorage.removeItem('tab' + ulIndex);
       localStorage.setItem('tab' + ulIndex, $(this).index());
    });
+
+   // табы обычные без кеша
+   // $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+   //    $(this)
+   //       .addClass('active').siblings().removeClass('active')
+   //       .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+   // });
 
 
    if (jQuery(window).width() < 767) {
@@ -40,33 +53,35 @@ $(document).ready(function () {
 
    // Check for hash value in URL
    var hash = window.location.hash.substr(1);
-   var href = $('.content-info__link').each(function(){
+   var href = $('.content-info__link').each(function () {
       var href = $(this).attr('href');
-      if(hash==href.substr(0,href.length-5)){
-         var toLoad = hash+'.html #content';
+      if (hash == href.substr(0, href.length - 5)) {
+         var toLoad = hash + '.html #content';
          $('#content').load(toLoad);
       }
    });
 
-   $('.content-info__link').click(function(){
+   $('.content-info__link').click(function () {
 
-      var toLoad = $(this).attr('href')+' #content';
+      var toLoad = $(this).attr('href') + ' #content';
       $('#content').fadeOut('fast').hide(loadContent);
-      window.location.hash = $(this).attr('href').substr(0,$(this).attr('href').length-5);
+      window.location.hash = $(this).attr('href').substr(0, $(this).attr('href').length - 5);
 
-      if (toLoad && jQuery(window).width() < 767){
-         $(this).parents().find('.aside').css({'display':'none'});
+      if (toLoad && jQuery(window).width() < 767) {
+         $(this).parents().find('.aside').css({'display': 'none'});
          $(this).parents().find('.game-trainings__main').addClass('game-trainings__main--page-inner')
-      } else if(toLoad && jQuery(window).width() > 767){
+      } else if (toLoad && jQuery(window).width() > 767) {
          $(this).parents().find('.game-trainings__main').addClass('game-trainings__main--page-inner')
       }
 
       function loadContent() {
-         $('#content').load(toLoad,'',showNewContent());
+         $('#content').load(toLoad, '', showNewContent());
       }
+
       function showNewContent() {
          $('#content').fadeIn('slow').show();
       }
+
       return false;
    });
 });

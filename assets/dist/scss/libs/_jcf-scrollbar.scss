@@ -36,13 +36,12 @@
   width: 0;
 }
 .jcf-scrollbar-vertical .jcf-scrollbar-handle {
-  //height: 23px;
-  min-height: 23px;
+  height: 23px !important;
   width: 4px;
   background-color: $color-blue;
   @media (min-width: $screen-xl) {
     width: 6px;
-    min-height: 52px;
+    height: 52px !important;
   }
 }
 
