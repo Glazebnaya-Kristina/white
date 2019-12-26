@@ -42,6 +42,14 @@ $(document).ready(function () {
    });
 
 
+   // // закрытие модального окна с
+   // var btnThanksRegistration = document.querySelector('button[data-modal="thanks-registration"]');
+   //
+   // btnThanksRegistration.addEventListener('click', function (e) {
+   //    e.preventDefault();
+   //    var modalRegistration = document.querySelector('.popup[data-modal="registration"]');
+   //    modalRegistration.classList.remove('popup--opened');
+   // });
 
 
    /* Записываем в переменные массив элементов-кнопок и подложку.
@@ -82,14 +90,6 @@ $(document).ready(function () {
    }); // end foreach
 
 
-   // // закрытие модального окна с
-   // var btnThanksRegistration = document.querySelector('button[data-modal="thanks-registration"]');
-   //
-   // btnThanksRegistration.addEventListener('click', function (e) {
-   //    e.preventDefault();
-   //    var modalRegistration = document.querySelector('.popup[data-modal="registration"]');
-   //    modalRegistration.classList.remove('popup--opened');
-   // });
 
 
    closeButtons.forEach(function(item){

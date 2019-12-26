@@ -3,11 +3,22 @@
 }
 .datepicker.active{
   //transform: translateX(50%);
-  left: 25px !important;
+
+  @media (max-width: 767px) {
+    left: 15px !important;
+  }
 }
 .calendar{
   width: 272px;
   font-family: $font-family;
+  //@media (min-width: $screen-md) {
+  //  left: 420px !important;
+  //  top: 460px !important;
+  //}
+  //@media (min-width: $screen-xl) {
+  //  left: 620px !important;
+  //  top: 450px !important;
+  //}
   .datepicker--nav{
     background-color: $color-blue;
     border: none;
@@ -112,4 +123,16 @@
     display: none;
   }
 
+  .datepicker--nav-title:hover {
+    background: transparent;
+  }
 }
+
+//.datepicker-inline{
+//  opacity: 0;
+//  z-index: -1;
+//  &--active{
+//    opacity: 1;
+//    z-index: 2;
+//  }
+//}

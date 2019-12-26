@@ -167,6 +167,7 @@
       @media (min-width: $screen-xl) {
         margin-top: -6px;
         padding-right: 0;
+        height: auto !important;
       }
     }
     .jcf-scrollable-wrapper{
@@ -175,6 +176,9 @@
       }
     }
     .jcf-scrollbar{
+      @media (min-width: $screen-md) {
+        right: -45px;
+      }
       @media (min-width: $screen-xl) {
         display: none;
       }
@@ -208,10 +212,62 @@
       }
     }
 
+    .feedback__item-wrapper {
+      @media (max-width: $screen-md) {
+        width: 32px;
+      }
+    }
+
     .feedback__item{
       position: relative;
       @media (max-width: $screen-xl) {
         flex-basis: 45%;
+      }
+
+      &--calendar-desc{
+        display: none;
+        @media (min-width: $screen-md) {
+          display: block;
+          order: 5;
+        }
+      }
+
+      &--calendar-mob{
+        @media (min-width: $screen-md) {
+          z-index: 1;
+          order: 6;
+          align-self: flex-end;
+        }
+
+        .label{
+          @media (min-width: $screen-md) {
+            z-index: 2;
+          }
+        }
+
+        .input{
+          @media (min-width: $screen-md) {
+            padding: 0;
+            width: 50px;
+            height: 40px;
+            font-size: 0;
+            border: none;
+            background-color: transparent;
+          }
+        }
+
+        .label__name{
+          @media (min-width: $screen-md) {
+            display: none;
+          }
+        }
+      }
+
+      &:last-child{
+        @media (min-width: $screen-md) {
+          flex-basis: 100%;
+          order: 7;
+        }
       }
     }
 
@@ -225,15 +281,30 @@
     .feedback__button{
       order: 3;
       margin-top: 34px;
+      @media (min-width: $screen-xl) {
+        max-width: 200px;
+      }
     }
 
     .feedback__wrapper-calendar{
+      @media (min-width: $screen-md) {
+        position: absolute;
+        right: auto;
+        left: 0;
+        top: 21px;
+        z-index: -1;
+      }
       i{
         position: absolute;
         right: 0;
         top: 49px;
         color: $color-blue;
         font-size: 23px;
+        @media (min-width: $screen-md) {
+          position: relative;
+          top: auto;
+          font-size: 27px;
+        }
       }
     }
   }

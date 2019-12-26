@@ -1166,27 +1166,30 @@
                 <input type="text" class="input feedback__input" required>
               </label>
                             </li>
-                            <!--            <li class="feedback__item">-->
-                            <!--              <label class="label label&#45;&#45;column">-->
-                            <!--                <span class="label__name">Дата проведения <b>*</b></span>-->
-                            <!--                <input type="text" class="input feedback__input" required>-->
-                            <!--              </label>-->
-                            <!--            </li>-->
-                            <li class="feedback__item">
+                            <li class="feedback__item feedback__item--calendar feedback__item--calendar-mob">
+                                <div class="feedback__item-wrapper">
+                                    <label class="label label--column">
+                  <span class="label__name">Дата проведения <b>*</b></span>
+                  <!--                <input type="text" id="calendar-2" class="input feedback__input" required>-->
+                  <input type="text" id="calendar" class="input feedback__input" required>
+                </label>
+                                    <div class="feedback__wrapper-calendar">
+                                        <i class="icon-calendar"></i>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="feedback__item feedback__item--calendar feedback__item--calendar-desc">
                                 <label class="label label--column">
                 <span class="label__name">Дата проведения <b>*</b></span>
-<!--                <span class="label__name label__name&#45;&#45;hidden">Календарь</span>-->
-<!--                <div class="datepicker-here"></div>-->
-                <input type="text" id="calendar" class="input feedback__input" required>
+                <input type="text" id="calendar-2" class="input feedback__input" required>
               </label>
-                                <!--              <div class="wrapper-calendar"></div>-->
-                                <div class="feedback__wrapper-calendar">
-                                    <i class="icon-calendar"></i>
-                                </div>
+                                <!--              <div class="feedback__wrapper-calendar">-->
+                                <!--                <i class="icon-calendar"></i>-->
+                                <!--              </div>-->
                             </li>
                             <li class="feedback__item">
                                 <label class="label label--column">
-                <span class="label__name">Сообщение <b>*</b></span>
+                <span class="label__name">Комментарий <b>*</b></span>
                 <textarea class="input input--textarea feedback__input feedback__input--textarea" required></textarea>
               </label>
                             </li>
