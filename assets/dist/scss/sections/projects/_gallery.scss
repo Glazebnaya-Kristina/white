@@ -85,3 +85,77 @@
     }
   }
 }
+
+.fancybox-nav{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  transition: background 0.2s ease;
+
+  @media (min-width: $screen-xl) {
+    width: 120px;
+    justify-content: flex-end;
+  }
+  &:hover{
+    //background: rgb(134,224,252);
+    //background: linear-gradient(85deg, rgba(134,224,252,0.01) 34%, rgba(49,225,254,0.1) 62%, rgba(0,228,255,0.2) 100%);
+    i{
+      color: $color-blue;
+    }
+  }
+}
+.fancybox-prev{
+  left: 0;
+
+  &:hover{
+    background: rgb(134,224,252);
+    background: linear-gradient(270deg, rgba(134,224,252,0.01) 34%, rgba(49,225,254,0.1) 62%, rgba(0,228,255,0.2) 100%);
+  }
+  i{
+    @media (min-width: $screen-xl) {
+      position: absolute;
+      left: -52px;
+    }
+  }
+}
+.fancybox-next{
+  right: 0;
+
+  &:hover{
+    //background: rgb(134,224,252);
+    background: linear-gradient(85deg, rgba(134,224,252,0.01) 34%, rgba(49,225,254,0.1) 62%, rgba(0,228,255,0.2) 100%);
+  }
+  i{
+    @media (min-width: $screen-xl) {
+      position: absolute;
+      right: -52px;
+    }
+  }
+}
+
+.fancybox__arrow{
+  &--prev{
+    left: 0;
+    transform: rotate(-180deg) translateY(-50%);
+  }
+}
+.fancybox-close {
+  position: absolute;
+  top: -30px;
+  right: 15px;
+  z-index: 2;
+  color: $color-violet-lightest;
+  @media (min-width: $screen-xl) {
+    top: -45px;
+    right: -56px;
+    font-size: 29px;
+  }
+}
+
+.fancybox-bg{
+  background: $white;
+}

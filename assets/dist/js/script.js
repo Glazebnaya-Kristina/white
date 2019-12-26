@@ -82,16 +82,16 @@ $(document).ready(function () {
 
 
    // закрытие модального окна заявкой на игру
-   var btnGame = document.querySelectorAll('a[data-modal="privacy-policy"]');
-
-   btnGame.forEach(function (item) {
-      item.addEventListener('click', function (e) {
-         e.preventDefault();
-         var modalquestion = document.querySelector('.popup[data-modal="ask-question"]');
-         modalquestion.classList.remove('popup--opened');
-      });
-
-   });
+   // var btnGame = document.querySelectorAll('a[data-modal="privacy-policy"]');
+   //
+   // btnGame.forEach(function (item) {
+   //    item.addEventListener('click', function (e) {
+   //       e.preventDefault();
+   //       var modalquestion = document.querySelector('.popup[data-modal="ask-question"]');
+   //       modalquestion.classList.remove('popup--opened');
+   //    });
+   //
+   // });
 
 
    closeButtons.forEach(function (item) {
