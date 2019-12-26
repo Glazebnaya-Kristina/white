@@ -894,6 +894,8 @@
         </button>
                     <button type="button" class="button button--simple js-open-modal" data-modal="thanks">Спасибо  за вашу заявку
         </button>
+                    <button type="button" class="button button--simple js-open-modal" data-modal="order-game">Заказать Игру
+        </button>
                 </section>
             </div>
         </div>
@@ -1113,7 +1115,7 @@
         </div>
 
         <!-- Модальное окно Задать вопрос -->
-        <div class="popup thanks popup--opened" data-modal="thanks">
+        <div class="popup thanks" data-modal="thanks">
             <div class="modal__header">
                 <h2 class="modal__title">Спасибо за вашу заявку</h2>
                 <button class="modal__close close close--icon close--modal" type="button">
@@ -1121,8 +1123,84 @@
         <i class="icon-close"></i>
       </button>
             </div>
-            <div class="modal__content modal__content--big jcf-scrollable">
+            <div class="modal__content">
+                <p>Наш менеджер ответит Вам в ближайшее время</p>
+            </div>
+        </div>
+
+        <!-- Модальное окно Заказать Игру -->
+        <div class="popup ask-question popup--opened" data-modal="order-game">
+            <div class="modal__header">
+                <h2 class="modal__title modal__title--mob">Задать вопрос</h2>
+                <h2 class="modal__title modal__title--desc">Заявка на проведение деловой игры</h2>
+                <button class="modal__close close close--icon close--modal" type="button">
+        <span class="close__description">Закрыть модальное окно</span>
+        <i class="icon-close"></i>
+      </button>
+            </div>
+            <div class="modal__content jcf-scrollable">
                 <div class="feedback ask-question__feedback">
+                    <form action="#" class="form feedback__form">
+                        <ul class="feedback__list">
+                            <li class="feedback__item">
+                                <label class="label label--column">
+                <span class="label__name">Ваше имя <b>*</b></span>
+                <input type="text" class="input feedback__input" required>
+              </label>
+                            </li>
+                            <li class="feedback__item">
+                                <label class="label label--column">
+                <span class="label__name">Название компании</span>
+                <input type="text" class="input feedback__input">
+              </label>
+                            </li>
+                            <li class="feedback__item">
+                                <label class="label label--column">
+                <span class="label__name">Контактный телефон <b>*</b></span>
+                <input type="text" class="input feedback__input" required>
+              </label>
+                            </li>
+                            <li class="feedback__item">
+                                <label class="label label--column">
+                <span class="label__name">E-mail <b>*</b></span>
+                <input type="text" class="input feedback__input" required>
+              </label>
+                            </li>
+                            <!--            <li class="feedback__item">-->
+                            <!--              <label class="label label&#45;&#45;column">-->
+                            <!--                <span class="label__name">Дата проведения <b>*</b></span>-->
+                            <!--                <input type="text" class="input feedback__input" required>-->
+                            <!--              </label>-->
+                            <!--            </li>-->
+                            <li class="feedback__item">
+                                <label class="label label--column">
+                <span class="label__name">Дата проведения <b>*</b></span>
+<!--                <span class="label__name label__name&#45;&#45;hidden">Календарь</span>-->
+<!--                <div class="datepicker-here"></div>-->
+                <input type="text" id="calendar" class="input feedback__input" required>
+              </label>
+                                <!--              <div class="wrapper-calendar"></div>-->
+                                <div class="feedback__wrapper-calendar">
+                                    <i class="icon-calendar"></i>
+                                </div>
+                            </li>
+                            <li class="feedback__item">
+                                <label class="label label--column">
+                <span class="label__name">Сообщение <b>*</b></span>
+                <textarea class="input input--textarea feedback__input feedback__input--textarea" required></textarea>
+              </label>
+                            </li>
+                        </ul>
+                        <button type="submit" class="button button--bgc button--big-size feedback__button">отправить <i
+                  class="icon-arrow-long"></i></button>
+
+                        <p class="feedback__consent">
+                            <input type="checkbox" id="consent-2" />
+                            <label for="consent-2">Я даю согласие на <a class="feedback__button-consent js-open-modal"
+                                                      data-modal="privacy-policy">обработку персональных
+              данных</a></label>
+                        </p>
+                    </form>
                 </div>
             </div>
         </div>
@@ -1172,12 +1250,14 @@
     </footer>
 
 
-    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/jcf.min.js"></script>
     <script src="../js/jcf.checkbox.min.js"></script>
     <script src="../js/jcf.scrollable.min.js"></script>
+    <script src="../js/datepicker.min.js"></script>
     <script src="../js/script.min.js"></script>
     <script src="../js/game-trainings.min.js"></script>
+
 
 </body>
 

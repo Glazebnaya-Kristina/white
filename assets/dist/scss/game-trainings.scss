@@ -5,12 +5,14 @@
 // Подключения библиотек
 @import "libs/jcf-scrollbar";
 @import "libs/jcf-checkbox";
+@import "libs/datepicker";
 // Подключения блоков
 @import "blocks/navigation-aside";
 @import "blocks/aside";
 @import "blocks/tabs";
 @import "blocks/characteristic";
 @import "blocks/list";
+@import "blocks/calendar";
 // поключения секций
 @import "sections/game-trainings/content-info";
 @import "sections/page-inner/inner-content";
@@ -151,7 +153,6 @@
       transform: translateX(0);
     }
   }
-
 }
 
 .footer {

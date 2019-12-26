@@ -6,6 +6,84 @@ $(document).ready(function () {
 
    jcf.replaceAll();
 
+
+   //
+   // $('#calendar').focus(function(){
+   //    $( ".wrapper-calendar" ).show();
+   //    $( ".wrapper-calendar" ).datepicker();
+   // });
+   // $('#calendar').blur(function(){
+   //    $( ".wrapper-calendar" ).hide();
+   // });
+   //
+   // $('.modal__content').on('scroll', function () {
+   //    var inp = $(this).find('input.hasDatepicker');
+   //    $('#ui-datepicker-div').css('top', inp.offset().top + inp.outerHeight());
+   // });
+
+
+
+
+   var checkout = $("#calendar").datepicker({
+      classes: 'calendar',
+      minDate: new Date(),
+      timepicker: true,
+      dateFormat: 'mm.dd.yy ',
+      minHours: 8,
+      maxHours: 19,
+      maxMinutes: 55,
+      // inline: true,
+      navTitles: {
+         days: 'MM <i>yyyy</i>',
+         months: 'yyyy',
+         years: 'yyyy1 - yyyy2'
+      },
+      prevHtml: '<i class="icon-arrow-2 arrow-calendar arrow-calendar--prev"></i>',
+      nextHtml: '<i class="icon-arrow-2 arrow-calendar"></i>'
+   });
+
+
+   $( ".modal__content" ).scroll(function() {
+      $('#calendar').datepicker({
+         classes: 'calendar',
+         minDate: new Date(),
+         timepicker: true,
+         dateFormat: 'mm.dd.yy ',
+         minHours: 8,
+         maxHours: 19,
+         maxMinutes: 55,
+         // inline: true,
+         navTitles: {
+            days: 'MM <i>yyyy</i>',
+            months: 'yyyy',
+            years: 'yyyy1 - yyyy2'
+         },
+         prevHtml: '<i class="icon-arrow-2 arrow-calendar arrow-calendar--prev"></i>',
+         nextHtml: '<i class="icon-arrow-2 arrow-calendar"></i>'
+      })
+   });
+
+
+   // $('#calendar').datepicker({
+   //    classes: 'calendar',
+   //    minDate: new Date(),
+   //    timepicker: true,
+   //    dateFormat: 'mm.dd.yy ',
+   //    minHours: 8,
+   //    maxHours: 19,
+   //    maxMinutes: 55,
+   //    // inline: true,
+   //    navTitles: {
+   //       days: 'MM <i>yyyy</i>',
+   //       months: 'yyyy',
+   //       years: 'yyyy1 - yyyy2'
+   //    },
+   //    prevHtml: '<i class="icon-arrow-2 arrow-calendar arrow-calendar--prev"></i>',
+   //    nextHtml: '<i class="icon-arrow-2 arrow-calendar"></i>'
+   // });
+
+
+
    // табы
    $('ul.tabs__caption').each(function (i) {
       var storage = localStorage.getItem('tab' + i);
@@ -92,4 +170,7 @@ $(document).ready(function () {
    $.each($("ol > li"), function(i) {
       $(this).attr("mark", "0" + number[i] + " ");
    });
+
+
+
 });

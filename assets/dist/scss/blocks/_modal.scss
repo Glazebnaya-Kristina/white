@@ -80,6 +80,19 @@
       font-size: 48px;
       letter-spacing: 0.21rem;
     }
+
+    &--mob{
+      @media (min-width: $screen-lg) {
+        display: none;
+      }
+    }
+
+    &--desc{
+      display: none;
+      @media (min-width: $screen-lg) {
+        display: block;
+      }
+    }
   }
 
   &__content {
@@ -148,8 +161,9 @@
   }
 
   .ask-question {
-
+    height: auto;
     .modal__content{
+      height: 450px;
       @media (min-width: $screen-xl) {
         margin-top: -6px;
         padding-right: 0;
@@ -195,6 +209,7 @@
     }
 
     .feedback__item{
+      position: relative;
       @media (max-width: $screen-xl) {
         flex-basis: 45%;
       }
@@ -210,6 +225,16 @@
     .feedback__button{
       order: 3;
       margin-top: 34px;
+    }
+
+    .feedback__wrapper-calendar{
+      i{
+        position: absolute;
+        right: 0;
+        top: 49px;
+        color: $color-blue;
+        font-size: 23px;
+      }
     }
   }
 
@@ -274,4 +299,37 @@
       }
     }
   }
+
+  .thanks{
+    padding: 37px 32px 50px;
+    height: auto;
+    @media (min-width: $screen-md) {
+      width: 826px;
+      padding: 81px 32px 132px;
+    }
+    p{
+      font-size: 18px;
+      font-weight: 300;
+      text-align: center;
+    }
+    .modal__content{
+      height: auto;
+      margin-top: 20px;
+      @media (min-width: $screen-md) {
+        margin-top: 44px;
+        padding: 0;
+      }
+
+    }
+    .modal__title{
+      padding: 0 31px;
+    }
+  }
+
+  //.wrapper-calendar{
+  //  position: absolute;
+  //  z-index: 2;
+  //  left: 50%;
+  //  transform: translateX(-50%);
+  //}
 }

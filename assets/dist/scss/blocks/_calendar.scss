@@ -1,0 +1,115 @@
+.datepickers-container{
+  top: -7px;
+}
+.datepicker.active{
+  //transform: translateX(50%);
+  left: 25px !important;
+}
+.calendar{
+  width: 272px;
+  font-family: $font-family;
+  .datepicker--nav{
+    background-color: $color-blue;
+    border: none;
+    border-radius: 3px;
+  }
+  .datepicker--nav-action{
+    &:focus{
+      outline: none;
+    }
+    &:hover{
+      background: transparent;
+    }
+  }
+
+  .datepicker--content,
+  .datepicker--time,
+  .datepicker--nav{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .datepicker--nav-title{
+    color: $white;
+    font-weight: 500;
+    font-size: 18px;
+    i{
+      margin-left: 15px;
+      color: $white;
+    }
+  }
+
+  .datepicker--cell.-selected-.-focus-{
+    color: $black;
+    background: #e1e1e1;
+  }
+
+  .datepicker--cell.-selected-{
+    background: #e1e1e1;
+  }
+
+  .datepicker--day-name{
+    text-transform: none;
+    font-size: 18px;
+  }
+
+  .datepicker--cell.-current-{
+    color: $color-blue;
+  }
+
+  .datepicker--cell{
+    height: 24px;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .datepicker--day-name{
+    color: $color-orange;
+  }
+
+  .datepicker--time-current{
+    margin: 0;
+    margin-left: 5px;
+  }
+  .datepicker--time-current-hours, .datepicker--time-current-minutes{
+    font-family: $font-family;
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #ebebeb;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+  }
+
+  /* All the same stuff for Firefox */
+  input[type=range]::-moz-range-thumb {
+    border: 1px solid #ebebeb;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+  }
+
+  ///* All the same stuff for IE */
+  input[type=range]::-ms-thumb {
+    border: 1px solid #ebebeb;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+  }
+
+  .datepicker--pointer{
+    display: none;
+  }
+
+}

@@ -1,0 +1,9 @@
+.arrow-calendar {
+  font-size: 12px;
+  color: $white;
+  &--prev {
+    &:before{
+      transform: rotate(-180deg);
+    }
+  }
+}
