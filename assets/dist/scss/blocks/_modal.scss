@@ -122,6 +122,19 @@
   .privacy-policy {
     @media (min-width: $screen-xl) {
       padding-left: 117px;
+      padding-top: 98px;
+    }
+
+    .modal__content{
+      @media (min-width: $screen-xl) {
+        padding-right: 15px;
+      }
+    }
+
+    .jcf-scrollbar-vertical{
+      @media (min-width: $screen-xl) {
+        right: 5px;
+      }
     }
 
     h3 {
@@ -213,7 +226,7 @@
     }
 
     .feedback__item-wrapper {
-      @media (max-width: $screen-md) {
+      @media (min-width: $screen-md) {
         width: 32px;
       }
     }

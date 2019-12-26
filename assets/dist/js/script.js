@@ -1,6 +1,6 @@
 $(document).ready(function () {
    //бергр меню
-   $('.menu-burger').on('click', function(e){
+   $('.menu-burger').on('click', function (e) {
       e.preventDefault();
 
       $('.menu-burger').toggleClass('menu-burger--open');
@@ -8,25 +8,25 @@ $(document).ready(function () {
       $('body').toggleClass('hidden');
    });
 
-   $('.page__main').on('click', function(e){
+   $('.page__main').on('click', function (e) {
       $('.menu-burger').removeClass('menu-burger--open');
       $('.navigation').removeClass('navigation--opened');
       $('body').removeClass('hidden');
    });
 
    //якорные ссылки
-   var $anchor = $( '.js-anchor' );
+   var $anchor = $('.js-anchor');
 
-   if ( $anchor.length ) {
-      $anchor.on('click', function(event) {
+   if ($anchor.length) {
+      $anchor.on('click', function (event) {
 
          event.preventDefault();
-         var $that = $( this ), hb = $('body, html');
+         var $that = $(this), hb = $('body, html');
 
-         if ( $that.is( 'button' ) ) {
-            hb.stop().animate({ scrollTop: $( '.' + $that.data( 'id' ) ).offset().top }, 1000, 'swing');
-         } else if ( $that.is( 'a' ) ) {
-            hb.stop().animate({ scrollTop: $( '.' + $that.attr( 'href' ).replace('#', '') ).offset().top }, 1000, 'swing');
+         if ($that.is('button')) {
+            hb.stop().animate({scrollTop: $('.' + $that.data('id')).offset().top}, 1000, 'swing');
+         } else if ($that.is('a')) {
+            hb.stop().animate({scrollTop: $('.' + $that.attr('href').replace('#', '')).offset().top}, 1000, 'swing');
          }
 
       });
@@ -36,36 +36,27 @@ $(document).ready(function () {
    $('.navigation__list li a').each(function () {
       var location = window.location.href;
       var link = this.href;
-      if(location == link) {
+      if (location == link) {
          $(this).addClass('navigation--active');
       }
    });
 
 
-   // // закрытие модального окна с
-   // var btnThanksRegistration = document.querySelector('button[data-modal="thanks-registration"]');
-   //
-   // btnThanksRegistration.addEventListener('click', function (e) {
-   //    e.preventDefault();
-   //    var modalRegistration = document.querySelector('.popup[data-modal="registration"]');
-   //    modalRegistration.classList.remove('popup--opened');
-   // });
-
-
    /* Записываем в переменные массив элементов-кнопок и подложку.
       Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
    var modalButtons = document.querySelectorAll('.js-open-modal'),
-      overlay      = document.querySelector('.js-overlay-modal'),
-      closeButtons = document.querySelectorAll('.close');
-   modalWrapp = document.querySelector('.modal');
-   body = document.querySelector('body');
+      overlay = document.querySelector('.js-overlay-modal'),
+      closeButtons = document.querySelectorAll('.close'),
+      modalWrapp = document.querySelector('.modal');
+
+   var bodyHidden = document.querySelector('.page');
 
 
    /* Перебираем массив кнопок */
-   modalButtons.forEach(function(item){
+   modalButtons.forEach(function (item) {
 
       /* Назначаем каждой кнопке обработчик клика */
-      item.addEventListener('click', function(e) {
+      item.addEventListener('click', function (e) {
 
          /* Предотвращаем стандартное действие элемента. Так как кнопку разные
             люди могут сделать по-разному. Кто-то сделает ссылку, кто-то кнопку.
@@ -80,27 +71,38 @@ $(document).ready(function () {
 
          /* После того как нашли нужное модальное окно, добавим классы
             подложке и окну чтобы показать их. */
+         bodyHidden.classList.add('hidden');
          modalElem.classList.add('popup--opened');
          overlay.classList.add('modal__overlay--opened');
          modalWrapp.classList.add('modal--opened');
-         body.classList.add('hidden');
          jcf.replaceAll();
       }); // end click
 
    }); // end foreach
 
 
+   // закрытие модального окна заявкой на игру
+   var btnGame = document.querySelectorAll('a[data-modal="privacy-policy"]');
+
+   btnGame.forEach(function (item) {
+      item.addEventListener('click', function (e) {
+         e.preventDefault();
+         var modalquestion = document.querySelector('.popup[data-modal="ask-question"]');
+         modalquestion.classList.remove('popup--opened');
+      });
+
+   });
 
 
-   closeButtons.forEach(function(item){
+   closeButtons.forEach(function (item) {
 
-      item.addEventListener('click', function(e) {
+      item.addEventListener('click', function (e) {
          // var closePolicy = document.querySelector('.close--policy');
 
-         if (this.classList.contains('close--policy')){
+         if (this.classList.contains('close--policy')) {
             var parentModal2 = this.closest('.popup');
             parentModal2.classList.remove('popup--opened');
-         } else{
+         } else {
             var parentModal = this.closest('.popup');
             parentModal.classList.remove('popup--opened');
             overlay.classList.remove('modal__overlay--opened');
@@ -130,7 +132,7 @@ $(document).ready(function () {
    }, false);
 
 
-   overlay.addEventListener('click', function() {
+   overlay.addEventListener('click', function () {
       document.querySelector('.modal--opened').classList.remove('modal--opened');
       // document.querySelector('.popup--opened').classList.remove('popup--opened');
       var modalMeny = document.querySelectorAll('.popup--opened');
@@ -146,7 +148,18 @@ $(document).ready(function () {
 //
 // });
 
-!function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),n=0;o[n]&&o[n]!==t;)++n;return Boolean(o[n])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype);
+!function (e) {
+   "function" != typeof e.matches && (e.matches = e.msMatchesSelector || e.mozMatchesSelector || e.webkitMatchesSelector || function (e) {
+      for (var t = this, o = (t.document || t.ownerDocument).querySelectorAll(e), n = 0; o[n] && o[n] !== t;) ++n;
+      return Boolean(o[n])
+   }), "function" != typeof e.closest && (e.closest = function (e) {
+      for (var t = this; t && 1 === t.nodeType;) {
+         if (t.matches(e)) return t;
+         t = t.parentNode
+      }
+      return null
+   })
+}(window.Element.prototype);
 
 // модальные окна
 
